@@ -1,197 +1,315 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<title>Home | IMD318 Personal Digital Space</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Home | IMD318 Personal Digital Space</title>
 
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body,h1,h2,h3,h4,h5,h6{
-    font-family:"Times New Roman", serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 body{
-    background:#F4F8FC;
-    margin:0;
+font-family:"Times New Roman", Times, serif;
+background:#F4F8FC;
+color:#000;
+}
+
+/* HEADER */
+
+.header{
+background:#2563EB;
+color:white;
+text-align:center;
+padding:15px;
+font-size:24px;
+font-weight:bold;
+letter-spacing:1px;
+}
+
+.header span{
+font-size:14px;
 }
 
 /* NAVIGATION */
 
-.w3-bar{
-    background:white !important;
-    box-shadow:0 2px 15px rgba(0,0,0,0.08);
-    padding:15px;
-    position:sticky;
-    top:0;
-    z-index:999;
-}
-
-.menu-toggle{
-    display:none;
-    font-size:24px;
-    font-weight:bold;
-    cursor:pointer;
-    color:#2563EB;
+nav{
+background:#0F172A;
+padding:15px;
+position:relative;
+text-align:center;
 }
 
 .nav-links{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:10px;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-wrap:wrap;
+gap:20px;
 }
 
 .nav-links a{
-    text-decoration:none;
-    color:#0F172A;
-    font-weight:bold;
-    padding:10px 18px;
-    border-radius:8px;
-    transition:0.3s;
+color:white;
+text-decoration:none;
+font-weight:bold;
+position:relative;
+font-size:15px;
+padding:5px;
 }
 
-.nav-links a:hover{
-    background:#EAF2FF;
-    color:#2563EB;
+.nav-links a::after{
+content:"";
+width:0%;
+height:2px;
+background:silver;
+position:absolute;
+left:0;
+bottom:-4px;
+transition:0.3s;
 }
 
-.active-nav{
-    background:#2563EB;
-    color:white !important;
+.nav-links a:hover::after{
+width:100%;
+}
+
+.menu-toggle{
+display:none;
+font-size:24px;
+color:white;
+font-weight:bold;
+cursor:pointer;
+text-align:left;
 }
 
 /* HERO */
 
 .hero{
-    background:linear-gradient(
-        135deg,
-        #0F172A,
-        #2563EB,
-        #C0C0C0
-    );
-    color:white;
-    min-height:70vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
+background:linear-gradient(
+135deg,
+#0F172A,
+#2563EB,
+#C0C0C0
+);
+color:white;
+text-align:center;
+padding:100px 20px;
 }
 
 .hero h1{
-    font-size:60px;
-    letter-spacing:2px;
+font-size:55px;
+margin-bottom:20px;
 }
 
 .hero p{
-    max-width:800px;
-    margin:auto;
-    line-height:1.8;
+max-width:850px;
+margin:auto;
+line-height:1.8;
+font-size:18px;
 }
 
-.hero .w3-button{
-    margin-top:20px;
-    font-weight:bold;
+.website-btn{
+display:inline-block;
+margin-top:25px;
+padding:12px 25px;
+background:white;
+color:#2563EB;
+text-decoration:none;
+border-radius:5px;
+font-size:16px;
+font-weight:bold;
+transition:0.3s;
 }
 
-/* SECTION */
+.website-btn:hover{
+background:silver;
+color:black;
+}
+
+/* CONTENT */
+
+.container{
+max-width:1150px;
+margin:40px auto;
+padding:20px;
+}
 
 .section-title{
-    color:#2563EB;
+text-align:center;
+margin-bottom:30px;
 }
 
-/* CARDS */
-
-.w3-card{
-    border-radius:15px;
-    transition:0.3s;
-    height:100%;
-    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+.section-title h2{
+font-size:34px;
+color:#2563EB;
+margin-bottom:10px;
 }
 
-.w3-card:hover{
-    transform:translateY(-8px);
-    box-shadow:0 10px 25px rgba(37,99,235,0.25);
+.section-title p{
+font-size:16px;
+}
+
+.card-container{
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 4px 12px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+box-shadow:0 8px 20px rgba(37,99,235,0.25);
 }
 
 .card-icon{
-    font-size:50px;
-    margin-bottom:10px;
+font-size:50px;
+margin-bottom:15px;
 }
 
-/* BUTTON */
-
-.blue-btn{
-    background:#2563EB !important;
-    color:white !important;
-    border-radius:8px;
+.card h4{
+margin-bottom:10px;
+color:#2563EB;
 }
 
-.blue-btn:hover{
-    background:#1D4ED8 !important;
+.card p{
+line-height:1.7;
+margin-bottom:15px;
 }
 
-.silver-btn{
-    background:#C0C0C0 !important;
-    color:black !important;
-    border-radius:8px;
+.card a{
+display:inline-block;
+padding:10px 18px;
+background:#2563EB;
+color:white;
+text-decoration:none;
+border-radius:5px;
 }
 
-/* EXTERNAL CONNECTION */
+.card a:hover{
+background:#1D4ED8;
+}
+
+/* EXTERNAL CONNECTIONS */
 
 .external-box{
-    background:white;
-    border-radius:15px;
-    padding:25px;
-    box-shadow:0 4px 12px rgba(0,0,0,0.08);
+background:white;
+padding:30px;
+margin-top:40px;
+border-radius:10px;
+box-shadow:0 4px 12px rgba(0,0,0,0.1);
+}
+
+.external-box h3{
+margin-bottom:15px;
+color:#2563EB;
+}
+
+.external-box p{
+margin-bottom:20px;
+line-height:1.8;
+}
+
+.external-box a{
+display:inline-block;
+padding:10px 18px;
+margin-right:10px;
+text-decoration:none;
+border-radius:5px;
+font-weight:bold;
+}
+
+.github-btn{
+background:silver;
+color:black;
+}
+
+.framework-btn{
+background:#2563EB;
+color:white;
+}
+
+/* GIF */
+
+.gif-section{
+text-align:center;
+padding:30px;
+}
+
+.gif-section img{
+max-width:150px;
 }
 
 /* FOOTER */
 
 footer{
-    background:#0F172A;
-    color:white;
-}
-
-footer hr{
-    border:1px solid silver;
+background:#2563EB;
+color:white;
+text-align:center;
+padding:15px;
+margin-top:30px;
 }
 
 /* MOBILE */
 
-@media(max-width:768px){
+@media (max-width:768px){
 
-    .menu-toggle{
-        display:block;
-    }
+.header{
+font-size:18px;
+padding:12px;
+}
 
-    .nav-links{
-        display:none;
-        flex-direction:column;
-        margin-top:15px;
-        gap:5px;
-    }
+.menu-toggle{
+display:block;
+padding-left:10px;
+text-align:left;
+}
 
-    .nav-links.active{
-        display:flex;
-    }
+.nav-links{
+display:none;
+flex-direction:column;
+background:#0F172A;
+margin-top:15px;
+padding:10px 0;
+border-radius:8px;
+}
 
-    .nav-links a{
-        width:100%;
-        text-align:center;
-    }
+.nav-links.active{
+display:flex;
+}
 
-    .hero h1{
-        font-size:40px;
-    }
+.nav-links a{
+padding:10px;
+font-size:16px;
+}
+
+.hero{
+padding:70px 20px;
+}
+
+.hero h1{
+font-size:38px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+.container{
+width:95%;
+}
 
 }
 
@@ -200,260 +318,217 @@ footer hr{
 
 <body>
 
-<div class="w3-bar">
+<div class="header">
+IMD318 PERSONAL DIGITAL SPACE<br>
+<span>Information Management Portfolio</span>
+</div>
 
-    <div class="menu-toggle" onclick="toggleMenu()">
-        ☰ Menu
-    </div>
+<nav>
 
-    <div class="nav-links" id="navLinks">
+<div class="menu-toggle" onclick="toggleMenu()">☰ Menu</div>
 
-        <a href="index.html" class="active-nav">Home</a>
-        <a href="biodata.html">Biodata</a>
-        <a href="experience.html">Experience</a>
-        <a href="education.html">Education</a>
-        <a href="family.html">Family</a>
-        <a href="gallery.html">Gallery</a>
+<div class="nav-links" id="navLinks">
 
-    </div>
+<a href="index.html">Home</a>
+<a href="biodata.html">Biodata</a>
+<a href="experience.html">Experience</a>
+<a href="education.html">Education</a>
+<a href="family.html">Family</a>
+<a href="gallery.html">Gallery</a>
 
 </div>
 
-<header class="w3-container hero w3-center w3-padding-64">
+</nav>
 
-    <h1><b>MY PERSONAL SPACE</b></h1>
+<header class="hero">
 
-    <hr style="width:120px;border:2px solid silver">
+<h1>My Personal Space</h1>
 
-    <p class="w3-large">
-        Archiving the academic progression, individual landmarks,
-        and creative environmental insights of an aspiring
-        Information Management professional.
-    </p>
+<p>
+Archiving the academic progression, individual landmarks,
+and creative environmental insights of an aspiring
+Information Management professional.
+</p>
 
-    <a href="biodata.html"
-       class="w3-button w3-white w3-round-large w3-padding-large">
-       Explore Profile Matrix →
-    </a>
+<a href="biodata.html" class="website-btn">
+Explore Profile Matrix
+</a>
 
 </header>
 
-<!-- CONTENT -->
-    <div class="w3-content w3-padding-64" style="max-width:1150px">
+<div class="container">
 
-    <div class="w3-center w3-padding-32">
+<div class="section-title">
 
-        <h2 class="section-title">
-            <b>Curated Portfolio Modules</b>
-        </h2>
+<h2>Curated Portfolio Modules</h2>
 
-        <p>
-            Select an operational gateway to review comprehensive
-            structures and environmental archives.
-        </p>
-
-    </div>
-
-    <div class="w3-row-padding">
-
-        <!-- Biodata -->
-
-        <div class="w3-third w3-margin-bottom">
-
-            <div class="w3-card w3-white w3-padding">
-
-                <div class="card-icon">👤</div>
-
-                <h4><b>Personal Biodata</b></h4>
-
-                <p>
-                    Identity structural profiles, core demographic
-                    metrics, and custom image-mapped personal hobby
-                    summaries.
-                </p>
-
-                <a href="biodata.html"
-                   class="w3-button blue-btn">
-                   View
-                </a>
-
-            </div>
-
-        </div>
-
-        <!-- Experience -->
-
-        <div class="w3-third w3-margin-bottom">
-
-            <div class="w3-card w3-white w3-padding">
-
-                <div class="card-icon">💼</div>
-
-                <h4><b>Professional Timeline</b></h4>
-
-                <p>
-                    A structured log detailing practical technical
-                    assignments, hands-on tasks, and interactive
-                    environmental field records.
-                </p>
-
-                <a href="experience.html"
-                   class="w3-button blue-btn">
-                   View
-                </a>
-
-            </div>
-
-        </div>
-
-        <!-- Education -->
-
-        <div class="w3-third w3-margin-bottom">
-
-            <div class="w3-card w3-white w3-padding">
-
-                <div class="card-icon">🎓</div>
-
-                <h4><b>Academic Background</b></h4>
-
-                <p>
-                    Institutional history logs displaying completed
-                    credentials mapped seamlessly with data and web
-                    competencies.
-                </p>
-
-                <a href="education.html"
-                   class="w3-button blue-btn">
-                   View
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-    <!-- SECOND ROW -->
-
-    <div class="w3-row-padding w3-margin-top">
-
-        <!-- Family -->
-
-        <div class="w3-half w3-margin-bottom">
-
-            <div class="w3-card w3-white w3-padding">
-
-                <div class="card-icon">👨‍👩‍👧‍👦</div>
-
-                <h4><b>Family Background</b></h4>
-
-                <p>
-                    Explore family information, personal support
-                    systems, and important individuals who have
-                    contributed to personal growth and success.
-                </p>
-
-                <a href="family.html"
-                   class="w3-button blue-btn">
-                   View
-                </a>
-
-            </div>
-
-        </div>
-
-        <!-- Gallery -->
-
-        <div class="w3-half w3-margin-bottom">
-
-            <div class="w3-card w3-white w3-padding">
-
-                <div class="card-icon">🖼️</div>
-
-                <h4><b>Gallery Collection</b></h4>
-
-                <p>
-                    A collection of memorable moments, activities,
-                    achievements, and experiences documented through
-                    photographs and visual archives.
-                </p>
-
-                <a href="gallery.html"
-                   class="w3-button blue-btn">
-                   View
-                </a>
-
-            </div>
-
-        </div>
-
-    </div>
-
-    <!-- EXTERNAL CONNECTIONS -->
-
-    <div class="external-box w3-margin-top">
-
-        <h3><b>External Connections</b></h3>
-
-        <p>
-            Direct pipelines to operational system infrastructure,
-            markup repositories and technical stylesheet libraries.
-        </p>
-
-        <a href="https://github.com/"
-           target="_blank"
-           class="w3-button silver-btn">
-           GitHub Repository
-        </a>
-
-        <a href="https://www.w3schools.com/w3css/"
-           target="_blank"
-           class="w3-button blue-btn">
-           W3.CSS Framework
-        </a>
-
-    </div>
+<p>
+Select an operational gateway to review comprehensive
+structures and environmental archives.
+</p>
 
 </div>
 
-<div class="w3-center w3-padding-32">
+<!-- PORTFOLIO MODULES -->
 
-    <img src="image/levi.gif"
-         alt="Animation"
-         style="max-width:170px">
+<div class="card-container">
+<!-- Biodata -->
+
+<div class="card">
+
+<div class="card-icon">👤</div>
+
+<h4>Personal Biodata</h4>
+
+<p>
+Identity structural profiles, core demographic
+metrics, and custom image-mapped personal hobby
+summaries.
+</p>
+
+<a href="biodata.html">
+View
+</a>
 
 </div>
+
+<!-- Experience -->
+
+<div class="card">
+
+<div class="card-icon">💼</div>
+
+<h4>Professional Timeline</h4>
+
+<p>
+A structured log detailing practical technical
+assignments, hands-on tasks, and interactive
+environmental field records.
+</p>
+
+<a href="experience.html">
+View
+</a>
+
+</div>
+
+<!-- Education -->
+
+<div class="card">
+
+<div class="card-icon">🎓</div>
+
+<h4>Academic Background</h4>
+
+<p>
+Institutional history logs displaying completed
+credentials mapped seamlessly with data and web
+competencies.
+</p>
+
+<a href="education.html">
+View
+</a>
+
+</div>
+
+<!-- Family -->
+
+<div class="card">
+
+<div class="card-icon">👨‍👩‍👧‍👦</div>
+
+<h4>Family Background</h4>
+
+<p>
+Explore family information, personal support
+systems, and meaningful individuals who have
+contributed to personal growth and success.
+</p>
+
+<a href="family.html">
+View
+</a>
+
+</div>
+
+<!-- Gallery -->
+
+<div class="card">
+
+<div class="card-icon">🖼️</div>
+
+<h4>Gallery Collection</h4>
+
+<p>
+A collection of memorable moments, activities,
+achievements, and experiences documented through
+photographs and visual archives.
+</p>
+
+<a href="gallery.html">
+View
+</a>
+
+</div>
+
+</div>
+
+<!-- EXTERNAL CONNECTIONS -->
+
+<div class="external-box">
+
+<h3>External Connections</h3>
+
+<p>
+Direct pipelines to operational system infrastructure,
+markup repositories and technical stylesheet libraries.
+</p>
+
+<a href="https://github.com/"
+target="_blank"
+class="github-btn">
+GitHub Repository
+</a>
+
+<a href="https://www.w3schools.com/w3css/"
+target="_blank"
+class="framework-btn">
+W3.CSS Framework
+</a>
+
+</div>
+
+</div>
+
+<!-- GIF SECTION -->
+
+<div class="gif-section">
+
+<img src="image/levi.gif"
+alt="Animation">
+
+</div>
+
 <!-- FOOTER -->
 
-<footer class="w3-container w3-center w3-padding-32">
+<footer>
 
-    <p>
-        <b>Statement of Responsibility:</b><br><br>
-
-        This website is designed and maintained wholly by
-        <b>NUUR SHAHILA AISYAH</b>
-        (ID: <b>2024991167</b>)
-        for fulfillment of the IMD318 coursework requirement.
-    </p>
-
-    <p class="w3-small w3-margin-top">
-        Created: June 2026 |
-        Last Updated: June 2026
-    </p>
-
-    <hr>
-
-    <p>
-        © 2026 IMD318 Personal Digital Space
-    </p>
+<p>
+© NUUR SHAHILA AISYAH &nbsp;&nbsp; | &nbsp;&nbsp; 2024991167
+</p>
 
 </footer>
 
 <script>
 
 function toggleMenu(){
-    document.getElementById("navLinks")
-    .classList.toggle("active");
+
+var menu =
+document.getElementById("navLinks");
+
+menu.classList.toggle("active");
+
 }
 
 </script>
