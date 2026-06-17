@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Experience | IMD318 Personal Space</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:"Times New Roman", Times, serif;
+background:#F4F8FC;
+color:#000;
+}
+
+.header{
+background:#2563EB;
+color:white;
+text-align:center;
+padding:15px;
+font-size:24px;
+font-weight:bold;
+}
+
+.header span{
+font-size:14px;
+}
+
+nav{
+background:#0F172A;
+padding:15px;
+position:relative;
+text-align:center;
+}
+
+.nav-links{
+display:flex;
+justify-content:center;
+align-items:center;
+flex-wrap:wrap;
+gap:20px;
+}
+
+.nav-links a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+.active-page{
+color:#87CEFA !important;
+}
+
+.menu-toggle{
+display:none;
+font-size:24px;
+color:white;
+font-weight:bold;
+cursor:pointer;
+}
+
+.page-banner{
+background:linear-gradient(
+135deg,
+#0F172A,
+#2563EB,
+#C0C0C0
+);
+color:white;
+text-align:center;
+padding:70px 20px;
+}
+
+.page-banner h1{
+font-size:50px;
+margin-bottom:15px;
+}
+
+.page-banner p{
+font-size:18px;
+max-width:800px;
+margin:auto;
+line-height:1.8;
+}
+
+.container{
+max-width:1100px;
+margin:40px auto;
+padding:25px;
+background:white;
+border-radius:10px;
+box-shadow:0 4px 12px rgba(0,0,0,.1);
+}
+
+.section-title{
+color:#2563EB;
+border-bottom:2px solid #2563EB;
+padding-bottom:10px;
+margin-bottom:30px;
+}
+
+.timeline{
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+margin-top:30px;
+}
+
+.experience-card{
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 4px 12px rgba(0,0,0,.1);
+transition:.3s;
+border-top:5px solid #2563EB;
+}
+
+.experience-card:hover{
+transform:translateY(-8px);
+box-shadow:0 8px 20px rgba(37,99,235,.25);
+}
+
+.experience-card h3{
+color:#2563EB;
+margin-bottom:10px;
+}
+
+.experience-card p{
+line-height:1.8;
+}
+
+footer{
+background:#2563EB;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+@media(max-width:768px){
+
+.menu-toggle{
+display:block;
+}
+
+.nav-links{
+display:none;
+flex-direction:column;
+margin-top:15px;
+}
+
+.nav-links.active{
+display:flex;
+}
+
+.page-banner h1{
+font-size:35px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="header">
+IMD318 PERSONAL DIGITAL SPACE<br>
+<span>Information Management Portfolio</span>
+</div>
+
+<nav>
+
+<div class="menu-toggle" onclick="toggleMenu()">
+☰ Menu
+</div>
+
+<div class="nav-links" id="navLinks">
+
+<a href="index.html">Home</a>
+<a href="biodata.html">Biodata</a>
+<a href="experience.html" class="active-page">Experience</a>
+<a href="education.html">Education</a>
+<a href="family.html">Family</a>
+<a href="gallery.html">Gallery</a>
+
+</div>
+
+</nav>
+
+<div class="page-banner">
+
+<h1>Professional Experience</h1>
+
+<p>
+A collection of practical experiences, technical skills,
+and professional exposure gained throughout academic and
+industrial training activities.
+</p>
+
+</div>
+
+<!-- EXPERIENCE CONTENT -->
+<div class="container">
+
+<h2 class="section-title">
+Industrial Training Experience
+</h2>
+
+<p>
+Throughout my industrial training at Leviat Sdn Bhd,
+I gained valuable practical experience in Information
+Technology support, system administration, software
+deployment and troubleshooting. These experiences
+enhanced my technical skills and strengthened my
+problem-solving abilities in a professional working
+environment.
+</p>
+
+<div class="timeline">
+
+<!-- CARD 1 -->
+
+<div class="experience-card">
+
+<h3>💻 IT Support Services</h3>
+
+<p>
+Provided technical assistance to users by resolving
+hardware and software issues, troubleshooting system
+errors, and ensuring smooth daily IT operations.
+</p>
+
+</div>
+
+<!-- CARD 2 -->
+
+<div class="experience-card">
+
+<h3>🔐 Active Directory Administration</h3>
+
+<p>
+Managed user accounts, updated information,
+performed password resets, and assisted with
+Microsoft 365 license assignments through
+Active Directory.
+</p>
+
+</div>
+
+<!-- CARD 3 -->
+
+<div class="experience-card">
+
+<h3>📧 Microsoft 365 Support</h3>
+
+<p>
+Assisted users with Outlook issues, mailbox
+configuration, profile setup, email synchronization,
+and Microsoft Office application support.
+</p>
+
+</div>
+
+<!-- CARD 4 -->
+
+<div class="experience-card">
+
+<h3>🌐 Network Troubleshooting</h3>
+
+<p>
+Performed internet connectivity checks, DNS
+verification, VPN troubleshooting, and network
+diagnostic testing to ensure stable connections.
+</p>
+
+</div>
+
+<!-- CARD 5 -->
+
+<div class="experience-card">
+
+<h3>🖨️ Printer Management</h3>
+
+<p>
+Installed printer drivers, configured network
+printers, resolved printing issues, and supported
+SAP Business One printing requirements.
+</p>
+
+</div>
+
+<!-- CARD 6 -->
+
+<div class="experience-card">
+
+<h3>⚙️ Software Installation</h3>
+
+<p>
+Installed and configured engineering software,
+business applications, VPN clients, and security
+tools according to company requirements.
+</p>
+
+</div>
+
+<!-- CARD 7 -->
+
+<div class="experience-card">
+
+<h3>📊 Asset Management</h3>
+
+<p>
+Updated IT asset records, verified hardware
+information, monitored warranty status, and
+maintained accurate inventory documentation
+for company devices.
+</p>
+
+</div>
+
+<!-- CARD 8 -->
+
+<div class="experience-card">
+
+<h3>☁️ Cloud & File Management</h3>
+
+<p>
+Supported OneDrive, SharePoint, Google Drive,
+and shared folder synchronization while assisting
+users with file access and permission issues.
+</p>
+
+</div>
+
+<!-- CARD 9 -->
+
+<div class="experience-card">
+
+<h3>🔒 Security Administration</h3>
+
+<p>
+Worked with security applications such as
+Zscaler, Symantec, Cisco VPN, GlobalProtect,
+Qualys and Okta Verify to maintain secure
+access to company resources.
+</p>
+
+</div>
+
+<!-- CARD 10 -->
+
+<div class="experience-card">
+
+<h3>🛠 Device Preparation</h3>
+
+<p>
+Prepared laptops and desktop computers for
+deployment, performed Windows installation,
+system updates, software configuration and
+user setup.
+</p>
+
+</div>
+
+<!-- CARD 11 -->
+
+<div class="experience-card">
+
+<h3>📁 Documentation & Reporting</h3>
+
+<p>
+Prepared technical documentation, updated
+asset tracking spreadsheets, and maintained
+records of support activities and IT operations.
+</p>
+
+</div>
+
+<!-- CARD 12 -->
+
+<div class="experience-card">
+
+<h3>🤝 Team Collaboration</h3>
+
+<p>
+Collaborated with IT team members to solve
+technical issues, support end users, and ensure
+successful completion of daily operational tasks.
+</p>
+
+</div>
+
+</div>
+
+<!-- ACHIEVEMENTS -->
+
+<div style="margin-top:50px;">
+
+<h2 class="section-title">
+Skills & Achievements Gained
+</h2>
+
+<div class="timeline">
+
+<div class="experience-card">
+
+<h3>💡 Problem Solving</h3>
+
+<p>
+Developed analytical thinking and troubleshooting
+skills by resolving various hardware, software,
+network and system-related issues.
+</p>
+
+</div>
+
+<div class="experience-card">
+
+<h3>🗣 Communication Skills</h3>
+
+<p>
+Improved communication skills through interaction
+with users, colleagues, vendors and technical teams.
+</p>
+
+</div>
+
+<div class="experience-card">
+
+<h3>📈 Technical Knowledge</h3>
+
+<p>
+Enhanced practical knowledge in networking,
+system administration, Microsoft 365, security
+solutions and IT support operations.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+<b>Statement of Responsibility:</b>
+</p>
+
+<p>
+This website is designed and maintained wholly by
+NUUR SHAHILA AISYAH
+(ID: 2024991167)
+for fulfillment of the IMD318 coursework requirement.
+</p>
+
+<p>
+Created: June 2026 |
+Last Updated: June 2026
+</p>
+
+</footer>
+
+<script>
+
+function toggleMenu(){
+
+var menu =
+document.getElementById("navLinks");
+
+menu.classList.toggle("active");
+
+}
+
+</script>
+
+</body>
+</html>
