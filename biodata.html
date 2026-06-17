@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Biodata | IMD318 Personal Space</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:"Times New Roman", Times, serif;
+background:#F4F8FC;
+color:#000;
+}
+
+/* HEADER */
+
+.header{
+background:#2563EB;
+color:white;
+text-align:center;
+padding:15px;
+font-size:24px;
+font-weight:bold;
+letter-spacing:1px;
+}
+
+.header span{
+font-size:14px;
+}
+
+/* NAVIGATION */
+
+nav{
+background:#0F172A;
+padding:15px;
+position:relative;
+text-align:center;
+}
+
+.nav-links{
+display:flex;
+justify-content:center;
+align-items:center;
+flex-wrap:wrap;
+gap:20px;
+}
+
+.nav-links a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+position:relative;
+font-size:15px;
+padding:5px;
+}
+
+.nav-links a::after{
+content:"";
+width:0%;
+height:2px;
+background:silver;
+position:absolute;
+left:0;
+bottom:-4px;
+transition:0.3s;
+}
+
+.nav-links a:hover::after{
+width:100%;
+}
+
+.active-page{
+color:#87CEFA !important;
+}
+
+.menu-toggle{
+display:none;
+font-size:24px;
+color:white;
+font-weight:bold;
+cursor:pointer;
+text-align:left;
+}
+
+/* PAGE TITLE */
+
+.page-banner{
+background:linear-gradient(
+135deg,
+#0F172A,
+#2563EB,
+#C0C0C0
+);
+color:white;
+text-align:center;
+padding:70px 20px;
+}
+
+.page-banner h1{
+font-size:50px;
+margin-bottom:15px;
+}
+
+.page-banner p{
+font-size:18px;
+max-width:800px;
+margin:auto;
+line-height:1.8;
+}
+
+/* CONTENT */
+
+.container{
+max-width:1100px;
+margin:40px auto;
+padding:25px;
+background:white;
+border-radius:10px;
+box-shadow:0 4px 12px rgba(0,0,0,.1);
+}
+
+.section-title{
+color:#2563EB;
+border-bottom:2px solid #2563EB;
+padding-bottom:10px;
+margin-bottom:30px;
+}
+
+.profile-section{
+display:flex;
+gap:30px;
+align-items:flex-start;
+flex-wrap:wrap;
+}
+
+.profile-image{
+flex:1;
+min-width:250px;
+text-align:center;
+}
+
+.profile-image img{
+width:100%;
+max-width:280px;
+border-radius:15px;
+border:4px solid #2563EB;
+cursor:pointer;
+}
+
+.profile-details{
+flex:2;
+min-width:300px;
+}
+
+.profile-details p{
+line-height:1.8;
+margin-bottom:15px;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:20px;
+}
+
+table td{
+border:1px solid #ddd;
+padding:12px;
+}
+
+table tr:nth-child(even){
+background:#F4F8FC;
+}
+
+table td:first-child{
+font-weight:bold;
+width:30%;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.header{
+font-size:18px;
+}
+
+.menu-toggle{
+display:block;
+}
+
+.nav-links{
+display:none;
+flex-direction:column;
+margin-top:15px;
+}
+
+.nav-links.active{
+display:flex;
+}
+
+.page-banner h1{
+font-size:35px;
+}
+
+.container{
+width:95%;
+padding:20px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="header">
+IMD318 PERSONAL DIGITAL SPACE<br>
+<span>Information Management Portfolio</span>
+</div>
+
+<nav>
+
+<div class="menu-toggle" onclick="toggleMenu()">
+☰ Menu
+</div>
+
+<div class="nav-links" id="navLinks">
+
+<a href="index.html">Home</a>
+<a href="biodata.html" class="active-page">Biodata</a>
+<a href="experience.html">Experience</a>
+<a href="education.html">Education</a>
+<a href="family.html">Family</a>
+<a href="gallery.html">Gallery</a>
+
+</div>
+
+</nav>
+
+<div class="page-banner">
+
+<h1>Personal Biodata</h1>
+
+<p>
+Identity structural profiles, demographic information,
+academic background and personal interests.
+</p>
+
+</div>
+
+<!-- PROFILE CONTENT -->
+ <div class="container">
+
+<h2 class="section-title">
+Personal Profile
+</h2>
+
+<div class="profile-section">
+
+<div class="profile-image">
+
+<img src="image/profile.jpg"
+alt="Profile Picture"
+onclick="onClick(this)">
+
+</div>
+
+<div class="profile-details">
+
+<p style="font-size:20px;color:#666;">
+<i>"Aspiring Information Management Professional"</i>
+</p>
+
+<p>
+NUUR SHAHILA AISYAH is a dedicated and motivated student
+currently pursuing a Diploma in Information Technology.
+This website serves as a personal portfolio developed for
+the IMD318 course, showcasing academic achievements,
+personal background, experiences, education, family,
+and memorable moments throughout the learning journey.
+</p>
+
+<table>
+
+<tr>
+<td>Full Name</td>
+<td>NUUR SHAHILA AISYAH</td>
+</tr>
+
+<tr>
+<td>Student ID</td>
+<td>2024991167</td>
+</tr>
+
+<tr>
+<td>Programme</td>
+<td>Diploma in Information Technology</td>
+</tr>
+
+<tr>
+<td>Institution</td>
+<td>Politeknik Sultan Idris Shah</td>
+</tr>
+
+<tr>
+<td>Nationality</td>
+<td>Malaysian</td>
+</tr>
+
+<tr>
+<td>Email</td>
+<td>your@email.com</td>
+</tr>
+
+<tr>
+<td>Skills</td>
+<td>
+HTML, CSS, Networking, IT Support,
+Microsoft 365, Active Directory
+</td>
+</tr>
+
+</table>
+
+</div>
+
+</div>
+
+<!-- HOBBY SECTION -->
+
+<div style="margin-top:50px;">
+
+<h2 class="section-title">
+Hobbies & Personal Interests
+</h2>
+
+<div class="hobby-container">
+
+<div class="hobby-card">
+
+<img src="image/hobby1.jpg"
+alt="Reading"
+onclick="onClick(this)">
+
+<h3>📚 Reading</h3>
+
+<p>
+Reading books and articles to gain new knowledge,
+improve critical thinking and expand understanding
+of various topics.
+</p>
+
+</div>
+
+<div class="hobby-card">
+
+<img src="image/hobby2.jpg"
+alt="Traveling"
+onclick="onClick(this)">
+
+<h3>✈️ Traveling</h3>
+
+<p>
+Exploring new places and cultures while creating
+memorable experiences and learning opportunities.
+</p>
+
+</div>
+
+<div class="hobby-card">
+
+<img src="image/hobby3.jpg"
+alt="Photography"
+onclick="onClick(this)">
+
+<h3>📸 Photography</h3>
+
+<p>
+Capturing beautiful moments, landscapes and memories
+through creative photography.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<style>
+
+.hobby-container{
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+margin-top:30px;
+}
+
+.hobby-card{
+background:white;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 4px 12px rgba(0,0,0,.1);
+transition:.3s;
+}
+
+.hobby-card:hover{
+transform:translateY(-8px);
+box-shadow:0 8px 20px rgba(37,99,235,.25);
+}
+
+.hobby-card img{
+width:100%;
+height:220px;
+object-fit:cover;
+cursor:pointer;
+}
+
+.hobby-card h3{
+padding:15px 15px 5px;
+color:#2563EB;
+}
+
+.hobby-card p{
+padding:0 15px 20px;
+line-height:1.7;
+}
+
+/* MODAL */
+
+.modal{
+display:none;
+position:fixed;
+z-index:9999;
+left:0;
+top:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.9);
+}
+
+.modal-content{
+display:block;
+margin:auto;
+max-width:85%;
+max-height:80%;
+margin-top:50px;
+}
+
+.close{
+position:absolute;
+right:30px;
+top:15px;
+font-size:40px;
+color:white;
+cursor:pointer;
+}
+
+.caption{
+text-align:center;
+color:white;
+padding:15px;
+font-size:18px;
+}
+
+/* FOOTER */
+
+footer{
+background:#2563EB;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+footer p{
+margin:5px 0;
+}
+
+</style>
+
+<!-- IMAGE MODAL -->
+
+<div id="imgModal" class="modal">
+
+<span class="close"
+onclick="document.getElementById('imgModal').style.display='none'">
+&times;
+</span>
+
+<img class="modal-content"
+id="modalImg">
+
+<div id="caption"
+class="caption">
+</div>
+
+</div>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+<b>Statement of Responsibility:</b>
+</p>
+
+<p>
+This website is designed and maintained wholly by
+NUUR SHAHILA AISYAH
+(ID: 2024991167)
+for fulfillment of the IMD318 coursework requirement.
+</p>
+
+<p>
+Created: June 2026 |
+Last Updated: June 2026
+</p>
+
+</footer>
+<script>
+
+function toggleMenu(){
+
+var menu =
+document.getElementById("navLinks");
+
+menu.classList.toggle("active");
+
+}
+
+function onClick(element){
+
+document.getElementById("imgModal").style.display =
+"block";
+
+document.getElementById("modalImg").src =
+element.src;
+
+document.getElementById("caption").innerHTML =
+element.alt;
+
+}
+
+window.onclick = function(event){
+
+var modal =
+document.getElementById("imgModal");
+
+if(event.target == modal){
+
+modal.style.display = "none";
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
