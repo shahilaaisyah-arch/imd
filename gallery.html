@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Gallery | IMD318 Personal Space</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:"Times New Roman", Times, serif;
+background:#F4F8FC;
+color:#000;
+}
+
+/* HEADER */
+
+.header{
+background:#2563EB;
+color:white;
+text-align:center;
+padding:15px;
+font-size:24px;
+font-weight:bold;
+}
+
+.header span{
+font-size:14px;
+}
+
+/* NAVIGATION */
+
+nav{
+background:#0F172A;
+padding:15px;
+position:relative;
+text-align:center;
+}
+
+.nav-links{
+display:flex;
+justify-content:center;
+align-items:center;
+flex-wrap:wrap;
+gap:20px;
+}
+
+.nav-links a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+position:relative;
+padding:5px;
+}
+
+.nav-links a::after{
+content:"";
+width:0%;
+height:2px;
+background:silver;
+position:absolute;
+left:0;
+bottom:-4px;
+transition:.3s;
+}
+
+.nav-links a:hover::after{
+width:100%;
+}
+
+.active-page{
+color:#87CEFA !important;
+}
+
+.menu-toggle{
+display:none;
+font-size:24px;
+color:white;
+cursor:pointer;
+}
+
+/* HERO */
+
+.page-banner{
+background:linear-gradient(
+135deg,
+#0F172A,
+#2563EB,
+#C0C0C0
+);
+color:white;
+text-align:center;
+padding:70px 20px;
+}
+
+.page-banner h1{
+font-size:50px;
+margin-bottom:15px;
+}
+
+.page-banner p{
+font-size:18px;
+max-width:800px;
+margin:auto;
+line-height:1.8;
+}
+
+/* CONTENT */
+
+.container{
+max-width:1100px;
+margin:40px auto;
+padding:25px;
+background:white;
+border-radius:10px;
+box-shadow:0 4px 12px rgba(0,0,0,.1);
+}
+
+.section-title{
+color:#2563EB;
+border-bottom:2px solid #2563EB;
+padding-bottom:10px;
+margin-bottom:30px;
+}
+
+/* BUTTONS */
+
+.gallery-buttons{
+display:grid;
+grid-template-columns:
+repeat(3,1fr);
+gap:12px;
+margin-top:25px;
+}
+
+.gallery-btn{
+padding:12px;
+border:none;
+background:#2563EB;
+color:white;
+font-weight:bold;
+border-radius:8px;
+cursor:pointer;
+transition:.3s;
+font-family:"Times New Roman";
+}
+
+.gallery-btn:hover{
+background:#1D4ED8;
+transform:translateY(-3px);
+}
+
+.gallery-content{
+display:none;
+margin-top:25px;
+padding:25px;
+background:white;
+border-radius:10px;
+box-shadow:0 4px 12px rgba(0,0,0,.1);
+}
+
+.gallery-content img{
+width:100%;
+max-width:700px;
+display:block;
+margin:auto;
+border-radius:10px;
+cursor:pointer;
+}
+
+.gallery-content video{
+width:100%;
+max-width:700px;
+display:block;
+margin:auto;
+border-radius:10px;
+}
+
+/* LIGHTBOX */
+
+.modal{
+display:none;
+position:fixed;
+z-index:9999;
+left:0;
+top:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.9);
+}
+
+.modal-content{
+display:block;
+margin:auto;
+max-width:90%;
+max-height:85%;
+margin-top:40px;
+}
+
+.close{
+position:absolute;
+top:15px;
+right:30px;
+font-size:40px;
+color:white;
+cursor:pointer;
+}
+
+/* FOOTER */
+
+footer{
+background:#2563EB;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.menu-toggle{
+display:block;
+}
+
+.nav-links{
+display:none;
+flex-direction:column;
+margin-top:15px;
+}
+
+.nav-links.active{
+display:flex;
+}
+
+.page-banner h1{
+font-size:35px;
+}
+
+.gallery-buttons{
+grid-template-columns:repeat(2,1fr);
+}
+
+.container{
+width:95%;
+padding:20px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="header">
+IMD318 PERSONAL DIGITAL SPACE<br>
+<span>Information Management Portfolio</span>
+</div>
+
+<nav>
+
+<div class="menu-toggle"
+onclick="toggleMenu()">
+☰ Menu
+</div>
+
+<div class="nav-links"
+id="navLinks">
+
+<a href="index.html">Home</a>
+<a href="biodata.html">Biodata</a>
+<a href="experience.html">Experience</a>
+<a href="education.html">Education</a>
+<a href="family.html">Family</a>
+<a href="gallery.html"
+class="active-page">Gallery</a>
+
+</div>
+
+</nav>
+
+<div class="page-banner">
+
+<h1>Gallery Collection</h1>
+
+<p>
+A collection of memorable moments,
+adventures, photographs and multimedia
+records throughout my personal journey.
+</p>
+
+</div>
+
+<!-- GALLERY CONTENT -->
+<div class="container">
+
+<h2 class="section-title">
+Gallery Archive
+</h2>
+
+<p>
+This gallery contains selected photographs,
+adventures, memorable moments and multimedia
+collections that represent my personal experiences
+and achievements.
+</p>
+
+<div class="gallery-buttons">
+
+<button class="gallery-btn"
+onclick="showGallery(1)">
+📸 Family
+</button>
+
+<button class="gallery-btn"
+onclick="showGallery(2)">
+🏞 Nature
+</button>
+
+<button class="gallery-btn"
+onclick="showGallery(3)">
+🥾 Hiking
+</button>
+
+<button class="gallery-btn"
+onclick="showGallery(4)">
+🌊 Waterfall
+</button>
+
+<button class="gallery-btn"
+onclick="showGallery(5)">
+⌚ Image Map
+</button>
+
+<button class="gallery-btn"
+onclick="showGallery(6)">
+🎥 Video
+</button>
+
+</div>
+
+<div id="galleryPanel"
+class="gallery-content">
+</div>
+
+</div>
+
+<!-- LIGHTBOX -->
+
+<div id="imgModal"
+class="modal">
+
+<span class="close"
+onclick="document.getElementById('imgModal').style.display='none'">
+&times;
+</span>
+
+<img id="modalImg"
+class="modal-content">
+
+</div>
+
+<script>
+
+let gallery=[
+
+/* FAMILY */
+
+`<center>
+
+<img src="image/fam.JPG"
+onclick="openImage(this)"
+alt="Family Photo">
+
+</center>
+
+<h2>Family Memories</h2>
+
+<p>
+A collection of memorable moments spent with
+family members. Family remains the greatest
+source of support, encouragement and happiness
+throughout my life.
+</p>`,
+
+/* NATURE */
+
+`<center>
+
+<img src="image/takah.JPG"
+onclick="openImage(this)"
+alt="Nature Gallery">
+
+</center>
+
+<h2>Nature Exploration</h2>
+
+<p>
+Capturing the beauty of nature through scenic
+views, rivers, forests and outdoor adventures.
+These experiences help me appreciate the natural
+environment and create lasting memories.
+</p>`,
+
+/* HIKING */
+
+`<center>
+
+<img src="image/cbl.JPG"
+onclick="openImage(this)"
+alt="Hiking Adventure">
+
+</center>
+
+<h2>Hiking Adventure</h2>
+
+<p>
+Hiking activities challenge physical endurance
+and provide opportunities to explore beautiful
+landscapes while strengthening teamwork and
+self-confidence.
+</p>`,
+
+/* WATERFALL */
+
+`<center>
+
+<img src="image/kontan.JPG"
+onclick="openImage(this)"
+alt="Waterfall Adventure">
+
+</center>
+
+<h2>Waterfall Exploration</h2>
+
+<p>
+Exploring waterfalls and natural attractions
+while enjoying the beauty of flowing water,
+fresh surroundings and unique landscapes.
+</p>`,
+
+/* IMAGE MAP */
+
+`<center>
+
+<img src="image/hoka.jpg"
+usemap="#trailmap"
+style="max-width:700px;width:100%;">
+
+<map name="trailmap">
+
+<area shape="circle"
+coords="136,180,35"
+href="https://www.coros.com"
+target="_blank">
+
+<area shape="poly"
+coords="134,20,267,10,363,85,342,150,294,165,216,135,115,110"
+href="https://www.hoka.com"
+target="_blank">
+
+</map>
+
+</center>
+
+<h2>Interactive Image Map</h2>
+
+<p>
+This image map links selected equipment
+directly to the official product websites.
+Click the watch or shoe area to explore.
+</p>`,
+
+/* VIDEO */
+
+`<center>
+
+<video controls>
+
+<source src="vid/rinjani.MP4"
+type="video/mp4">
+
+</video>
+
+</center>
+
+<h2>Rinjani Expedition Video</h2>
+
+<p>
+A short video documenting the experience,
+journey and memorable moments during the
+Rinjani mountain expedition.
+</p>`
+
+];
+
+function showGallery(no){
+
+var panel =
+document.getElementById("galleryPanel");
+
+panel.style.display = "block";
+
+panel.innerHTML = gallery[no-1];
+
+window.scrollTo({
+top: panel.offsetTop - 100,
+behavior: "smooth"
+});
+
+}
+
+function openImage(img){
+
+document.getElementById("imgModal").style.display =
+"block";
+
+document.getElementById("modalImg").src =
+img.src;
+
+}
+
+window.onclick = function(event){
+
+var modal =
+document.getElementById("imgModal");
+
+if(event.target == modal){
+
+modal.style.display = "none";
+
+}
+
+}
+
+function toggleMenu(){
+
+var menu =
+document.getElementById("navLinks");
+
+menu.classList.toggle("active");
+
+}
+
+</script>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+<b>Statement of Responsibility:</b>
+</p>
+
+<p>
+This website is designed and maintained wholly by
+NUUR SHAHILA AISYAH
+(ID: 2024991167)
+for fulfillment of the IMD318 coursework requirement.
+</p>
+
+<p>
+Created: June 2026 |
+Last Updated: June 2026
+</p>
+
+</footer>
+
+</body>
+</html>
