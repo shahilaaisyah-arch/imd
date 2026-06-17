@@ -168,8 +168,65 @@ border-radius:15px;
 
 .status-complete{
 background:silver;
+color:black;
 padding:5px 12px;
 border-radius:15px;
+}
+
+/* BUTTON SECTION */
+
+.education-buttons{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:12px;
+margin-top:20px;
+}
+
+.education-btn{
+padding:12px;
+border:none;
+background:#2563EB;
+color:white;
+font-weight:bold;
+border-radius:8px;
+cursor:pointer;
+font-family:"Times New Roman", serif;
+transition:.3s;
+}
+
+.education-btn:hover{
+background:#1D4ED8;
+transform:translateY(-3px);
+}
+
+.education-content{
+display:none;
+margin-top:25px;
+padding:25px;
+background:white;
+border-radius:10px;
+box-shadow:0 4px 12px rgba(0,0,0,.1);
+line-height:1.8;
+border-top:5px solid #2563EB;
+}
+
+.education-content h3{
+color:#2563EB;
+margin-bottom:10px;
+}
+
+/* FOOTER */
+
+footer{
+background:#2563EB;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+footer p{
+margin:5px 0;
 }
 
 /* MOBILE */
@@ -208,30 +265,38 @@ display:block;
 overflow-x:auto;
 }
 
+.education-buttons{
+grid-template-columns:1fr;
+}
+
 }
 
 </style>
+
 </head>
 
 <body>
 
 <div class="header">
 IMD318 PERSONAL DIGITAL SPACE<br>
-<span>Information Management Portfolio</span>
+<span>Information Technology Portfolio</span>
 </div>
 
 <nav>
 
-<div class="menu-toggle" onclick="toggleMenu()">
+<div class="menu-toggle"
+onclick="toggleMenu()">
 ☰ Menu
 </div>
 
-<div class="nav-links" id="navLinks">
+<div class="nav-links"
+id="navLinks">
 
 <a href="index.html">Home</a>
 <a href="biodata.html">Biodata</a>
 <a href="experience.html">Experience</a>
-<a href="education.html" class="active-page">Education</a>
+<a href="education.html"
+class="active-page">Education</a>
 <a href="family.html">Family</a>
 <a href="gallery.html">Gallery</a>
 
@@ -274,13 +339,17 @@ throughout my studies.
 </tr>
 
 <tr>
+
 <td>2023 - Present</td>
 
 <td>
-Politeknik Sultan Idris Shah<br>
+Politeknik Sultan Idris Shah
+<br>
+
 <span style="font-size:13px;color:gray;">
 Sabak Bernam, Selangor
 </span>
+
 </td>
 
 <td>
@@ -289,9 +358,11 @@ Diploma in Information Technology
 </td>
 
 <td>
+
 <span class="status-active">
 Current
 </span>
+
 </td>
 
 </tr>
@@ -309,9 +380,11 @@ Sijil Pelajaran Malaysia (SPM)
 </td>
 
 <td>
+
 <span class="status-complete">
 Completed
 </span>
+
 </td>
 
 </tr>
@@ -321,132 +394,49 @@ Completed
 <br><br>
 
 <h2 class="section-title">
-Academic Achievements
-</h2>
-
-<div class="education-grid">
-
-<div class="education-card">
-
-<h3>🎓 Diploma Studies</h3>
-
-<p>
-Currently pursuing a Diploma in Information
-Technology (Networking) with exposure to
-network administration, web development,
-database systems and IT support.
-</p>
-
-</div>
-
-<div class="education-card">
-
-<h3>📚 Academic Projects</h3>
-
-<p>
-Completed various projects involving website
-development, networking implementation,
-database design and information systems.
-</p>
-
-</div>
-
-<div class="education-card">
-
-<h3>💻 Technical Skills</h3>
-
-<p>
-Developed practical skills in HTML, CSS,
-Microsoft 365, Active Directory, networking,
-troubleshooting and system support.
-</p>
-
-</div>
-
-</div>
-
-<br><br>
-
-<h2 class="section-title">
 Core Subjects & Knowledge Areas
 </h2>
 
-<div class="education-grid">
-
- <div class="education-card">
-
-<h3>🌐 Networking</h3>
-
 <p>
-Understanding network infrastructure,
-IP addressing, routing concepts,
-switching technologies and network
-troubleshooting techniques.
+Click any subject below to view detailed information.
 </p>
+
+<div class="education-buttons">
+
+<button class="education-btn"
+onclick="showSubject(1)">
+🌐 Networking
+</button>
+
+<button class="education-btn"
+onclick="showSubject(2)">
+💻 Web Development
+</button>
+
+<button class="education-btn"
+onclick="showSubject(3)">
+🗄 Database Management
+</button>
+
+<button class="education-btn"
+onclick="showSubject(4)">
+☁ Information Systems
+</button>
+
+<button class="education-btn"
+onclick="showSubject(5)">
+🔐 Cybersecurity
+</button>
+
+<button class="education-btn"
+onclick="showSubject(6)">
+🖥 IT Support
+</button>
 
 </div>
 
-<div class="education-card">
-
-<h3>💻 Web Development</h3>
-
-<p>
-Developing responsive websites using
-HTML and CSS while applying modern
-web design principles and user-friendly
-interfaces.
-</p>
-
-</div>
-
-<div class="education-card">
-
-<h3>🗄 Database Management</h3>
-
-<p>
-Learning database concepts including
-data modelling, SQL queries, database
-design and information management.
-</p>
-
-</div>
-
-<div class="education-card">
-
-<h3>☁ Information Systems</h3>
-
-<p>
-Studying information systems,
-digital transformation and technology
-integration within organizations.
-</p>
-
-</div>
-
-<div class="education-card">
-
-<h3>🔐 Cybersecurity Basics</h3>
-
-<p>
-Understanding security principles,
-access control, data protection and
-basic cybersecurity practices.
-</p>
-
-</div>
-
-<div class="education-card">
-
-<h3>🖥 IT Support</h3>
-
-<p>
-Providing technical support,
-troubleshooting hardware and software
-issues, and assisting end users.
-</p>
-
-</div>
-
+<div id="subjectPanel"
+class="education-content">
 </div>
 
 <br><br>
@@ -455,125 +445,235 @@ issues, and assisting end users.
 Technical Competencies
 </h2>
 
-<div class="skill-box">
+<p>
+Click any competency below to view proficiency details.
+</p>
 
-<p><b>HTML & CSS</b></p>
-<div class="skill-bar">
-<div class="skill-fill" style="width:90%;">
+<div class="education-buttons">
+
+<button class="education-btn"
+onclick="showSkill(1)">
+HTML & CSS
+</button>
+
+<button class="education-btn"
+onclick="showSkill(2)">
+Networking
+</button>
+
+<button class="education-btn"
+onclick="showSkill(3)">
+Microsoft 365
+</button>
+
+<button class="education-btn"
+onclick="showSkill(4)">
+Active Directory
+</button>
+
+<button class="education-btn"
+onclick="showSkill(5)">
+IT Support
+</button>
+
+</div>
+
+<div id="skillPanel"
+class="education-content">
+</div>
+
+</div>
+
+<script>
+
+let subjects=[
+
+`<h3>🌐 Networking</h3>
+
+<p>
+Understanding network infrastructure,
+IP addressing, routing concepts,
+switching technologies and network
+troubleshooting techniques.
+</p>`,
+
+`<h3>💻 Web Development</h3>
+
+<p>
+Developing responsive websites using
+HTML and CSS while applying modern
+web design principles and user-friendly
+interfaces.
+</p>`,
+
+`<h3>🗄 Database Management</h3>
+
+<p>
+Learning database concepts including
+data modelling, SQL queries, database
+design and information management.
+</p>`,
+
+`<h3>☁ Information Systems</h3>
+
+<p>
+Studying information systems,
+digital transformation and technology
+integration within organizations.
+</p>`,
+
+`<h3>🔐 Cybersecurity</h3>
+
+<p>
+Understanding security principles,
+access control, data protection and
+basic cybersecurity practices.
+</p>`,
+
+`<h3>🖥 IT Support</h3>
+
+<p>
+Providing technical support,
+troubleshooting hardware and software
+issues while assisting end users in
+daily operations.
+</p>`
+
+];
+
+function showSubject(no){
+
+var panel =
+document.getElementById("subjectPanel");
+
+panel.style.display="block";
+
+panel.innerHTML=
+subjects[no-1];
+
+}
+
+let skills=[
+
+`<h3>HTML & CSS</h3>
+
+<p>
+Proficiency Level: 90%
+</p>
+
+<div style="background:#ddd;
+border-radius:20px;overflow:hidden;">
+
+<div style="width:90%;
+background:#2563EB;
+color:white;
+padding:8px;
+text-align:center;">
 90%
 </div>
-</div>
 
-<br>
+</div>`,
 
-<p><b>Networking</b></p>
-<div class="skill-bar">
-<div class="skill-fill" style="width:85%;">
+`<h3>Networking</h3>
+
+<p>
+Proficiency Level: 85%
+</p>
+
+<div style="background:#ddd;
+border-radius:20px;overflow:hidden;">
+
+<div style="width:85%;
+background:#2563EB;
+color:white;
+padding:8px;
+text-align:center;">
 85%
 </div>
-</div>
 
-<br>
+</div>`,
 
-<p><b>Microsoft 365</b></p>
-<div class="skill-bar">
-<div class="skill-fill" style="width:85%;">
+`<h3>Microsoft 365</h3>
+
+<p>
+Proficiency Level: 85%
+</p>
+
+<div style="background:#ddd;
+border-radius:20px;overflow:hidden;">
+
+<div style="width:85%;
+background:#2563EB;
+color:white;
+padding:8px;
+text-align:center;">
 85%
 </div>
-</div>
 
-<br>
+</div>`,
 
-<p><b>Active Directory</b></p>
-<div class="skill-bar">
-<div class="skill-fill" style="width:80%;">
+`<h3>Active Directory</h3>
+
+<p>
+Proficiency Level: 80%
+</p>
+
+<div style="background:#ddd;
+border-radius:20px;overflow:hidden;">
+
+<div style="width:80%;
+background:#2563EB;
+color:white;
+padding:8px;
+text-align:center;">
 80%
 </div>
-</div>
 
-<br>
+</div>`,
 
-<p><b>IT Support</b></p>
-<div class="skill-bar">
-<div class="skill-fill" style="width:90%;">
+`<h3>IT Support</h3>
+
+<p>
+Proficiency Level: 90%
+</p>
+
+<div style="background:#ddd;
+border-radius:20px;overflow:hidden;">
+
+<div style="width:90%;
+background:#2563EB;
+color:white;
+padding:8px;
+text-align:center;">
 90%
 </div>
-</div>
 
-</div>
+</div>`
 
-</div>
+];
 
-/* EDUCATION CARDS */
+function showSkill(no){
 
-.education-grid{
-display:grid;
-grid-template-columns:
-repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
-margin-top:20px;
+var panel =
+document.getElementById("skillPanel");
+
+panel.style.display="block";
+
+panel.innerHTML=
+skills[no-1];
+
 }
 
-.education-card{
-background:white;
-padding:25px;
-border-radius:10px;
-box-shadow:0 4px 12px rgba(0,0,0,.1);
-border-top:5px solid #2563EB;
-transition:.3s;
+function toggleMenu(){
+
+var menu =
+document.getElementById("navLinks");
+
+menu.classList.toggle("active");
+
 }
 
-.education-card:hover{
-transform:translateY(-8px);
-box-shadow:0 8px 20px rgba(37,99,235,.25);
-}
-
-.education-card h3{
-color:#2563EB;
-margin-bottom:10px;
-}
-
-.education-card p{
-line-height:1.8;
-}
-
-/* SKILL SECTION */
-
-.skill-box{
-background:#F4F8FC;
-padding:25px;
-border-radius:10px;
-margin-top:20px;
-}
-
-.skill-bar{
-width:100%;
-background:#ddd;
-border-radius:20px;
-overflow:hidden;
-}
-
-.skill-fill{
-background:#2563EB;
-color:white;
-text-align:center;
-padding:8px;
-font-weight:bold;
-}
-
-/* FOOTER */
-
-footer{
-background:#2563EB;
-color:white;
-text-align:center;
-padding:20px;
-margin-top:40px;
-}
-
-footer p{
-margin:5px 0;
-}
+</script>
 
 <!-- FOOTER -->
 
@@ -596,19 +696,6 @@ Last Updated: June 2026
 </p>
 
 </footer>
-
-<script>
-
-function toggleMenu(){
-
-var menu =
-document.getElementById("navLinks");
-
-menu.classList.toggle("active");
-
-}
-
-</script>
 
 </body>
 </html>
