@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>IMD318 Portfolio</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f8fafc;
+overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(15px);
+z-index:1000;
+}
+
+.logo{
+font-size:28px;
+font-weight:bold;
+color:white;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:25px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-weight:600;
+transition:.3s;
+}
+
+nav ul li a:hover{
+color:silver;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:linear-gradient(
+135deg,
+#0F172A,
+#2563EB,
+#C0C0C0
+);
+color:white;
+padding:20px;
+}
+
+.hero-content{
+animation:fadeUp 1.2s ease;
+}
+
+.hero h3{
+letter-spacing:3px;
+margin-bottom:10px;
+}
+
+.hero h1{
+font-size:70px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:20px;
+margin-bottom:30px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 35px;
+background:white;
+color:#2563EB;
+text-decoration:none;
+font-weight:bold;
+border-radius:30px;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-5px);
+}
+
+/* SECTION */
+
+section{
+padding:100px 10%;
+}
+
+.title{
+text-align:center;
+font-size:42px;
+margin-bottom:50px;
+color:#2563EB;
+}
+
+/* ABOUT */
+
+.about{
+display:grid;
+grid-template-columns:300px 1fr;
+gap:40px;
+align-items:center;
+}
+
+.about img{
+width:100%;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.2);
+}
+
+.about-text{
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+line-height:1.8;
+}
+
+/* EDUCATION */
+
+.education{
+background:#E5E7EB;
+}
+
+.timeline-item{
+background:white;
+padding:25px;
+margin-bottom:20px;
+border-left:5px solid #2563EB;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+/* EXPERIENCE */
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:20px;
+border-top:5px solid silver;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card i{
+font-size:45px;
+color:#2563EB;
+margin-bottom:15px;
+}
+
+/* SKILLS */
+
+.skills{
+background:#F1F5F9;
+}
+
+.skill{
+margin-bottom:25px;
+}
+
+.skill-name{
+margin-bottom:8px;
+font-weight:bold;
+}
+
+.progress{
+height:12px;
+background:#ddd;
+border-radius:20px;
+overflow:hidden;
+}
+
+.progress-bar{
+height:100%;
+background:#2563EB;
+}
+
+/* GALLERY */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.gallery img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:15px;
+transition:.4s;
+cursor:pointer;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+/* CONTACT */
+
+.contact{
+background:linear-gradient(
+135deg,
+#2563EB,
+#0F172A
+);
+}
+
+.contact .title{
+color:white;
+}
+
+form{
+max-width:700px;
+margin:auto;
+}
+
+input,
+textarea{
+width:100%;
+padding:15px;
+margin-bottom:15px;
+border:none;
+border-radius:10px;
+}
+
+button{
+width:100%;
+padding:15px;
+border:none;
+border-radius:10px;
+background:silver;
+font-weight:bold;
+cursor:pointer;
+}
+
+/* FOOTER */
+
+footer{
+background:#0F172A;
+color:white;
+text-align:center;
+padding:25px;
+}
+
+.social{
+margin-top:15px;
+}
+
+.social i{
+font-size:25px;
+margin:0 10px;
+}
+
+/* ANIMATION */
+
+@keyframes fadeUp{
+
+from{
+opacity:0;
+transform:translateY(40px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:42px;
+}
+
+.about{
+grid-template-columns:1fr;
+}
+
+nav{
+flex-direction:column;
+}
+
+nav ul{
+flex-wrap:wrap;
+justify-content:center;
+margin-top:15px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">
+IMD318
+</div>
+
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#education">Education</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<h3>WELCOME TO MY WEBSITE</h3>
+
+<h1>YOUR NAME</h1>
+
+<p>IMD318 INDIVIDUAL PROJECT</p>
+
+<a href="#about" class="btn">
+Explore More
+</a>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<h2 class="title">About Me</h2>
+
+<div class="about">
+
+<img src="profile.jpg">
+
+<div class="about-text">
+
+PASTE YOUR ABOUT ME CONTENT HERE
+
+</div>
+
+</div>
+
+</section>
+
+<section class="education" id="education">
+
+<h2 class="title">Education</h2>
+
+<div class="timeline-item">
+PASTE EDUCATION CONTENT HERE
+</div>
+
+<div class="timeline-item">
+PASTE EDUCATION CONTENT HERE
+</div>
+
+<div class="timeline-item">
+PASTE EDUCATION CONTENT HERE
+</div>
+
+</section>
+
+<section id="experience">
+
+<h2 class="title">Experience</h2>
+
+<div class="cards">
+
+<div class="card">
+<i class="fas fa-briefcase"></i>
+<h3>Experience 1</h3>
+<p>PASTE CONTENT HERE</p>
+</div>
+
+<div class="card">
+<i class="fas fa-laptop-code"></i>
+<h3>Experience 2</h3>
+<p>PASTE CONTENT HERE</p>
+</div>
+
+<div class="card">
+<i class="fas fa-award"></i>
+<h3>Experience 3</h3>
+<p>PASTE CONTENT HERE</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="skills" id="skills">
+
+<h2 class="title">Skills</h2>
+
+<div class="skill">
+<div class="skill-name">HTML</div>
+<div class="progress">
+<div class="progress-bar" style="width:90%"></div>
+</div>
+</div>
+
+<div class="skill">
+<div class="skill-name">CSS</div>
+<div class="progress">
+<div class="progress-bar" style="width:85%"></div>
+</div>
+</div>
+
+<div class="skill">
+<div class="skill-name">JavaScript</div>
+<div class="progress">
+<div class="progress-bar" style="width:75%"></div>
+</div>
+</div>
+
+</section>
+
+<section id="gallery">
+
+<h2 class="title">Gallery</h2>
+
+<div class="gallery">
+
+<img src="image1.jpg">
+<img src="image2.jpg">
+<img src="image3.jpg">
+<img src="image4.jpg">
+<img src="image5.jpg">
+<img src="image6.jpg">
+
+</div>
+
+</section>
+
+<section class="contact" id="contact">
+
+<h2 class="title">Contact Me</h2>
+
+<form>
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Your Email">
+
+<textarea rows="5" placeholder="Your Message"></textarea>
+
+<button type="submit">
+Send Message
+</button>
+
+</form>
+
+</section>
+
+<footer>
+
+<h3>IMD318 Individual Project</h3>
+
+<div class="social">
+<i class="fab fa-facebook"></i>
+<i class="fab fa-instagram"></i>
+<i class="fab fa-tiktok"></i>
+<i class="fab fa-youtube"></i>
+</div>
+
+<p style="margin-top:15px;">
+© 2026 All Rights Reserved
+</p>
+
+</footer>
+
+</body>
+</html>
