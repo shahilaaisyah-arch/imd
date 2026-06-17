@@ -503,141 +503,117 @@ class="gallery-content">
 
 </div>
 
-<div class="container">
+<!-- IMAGE MODAL -->
 
-<h2 class="section-title">
-Personal Profile
-</h2>
+<div id="imgModal" class="modal">
 
-<div class="profile-section">
+<span class="close"
+onclick="document.getElementById('imgModal').style.display='none'">
+&times;
+</span>
 
-<div class="profile-image">
+<img class="modal-content"
+id="modalImg">
 
-<img src="image/profile.jpg"
-alt="Profile Picture"
-onclick="onClick(this)">
+<div id="caption"
+class="caption">
+</div>
 
 </div>
 
-<div class="profile-details">
+<script>
 
-<h2 style="color:#2563EB;">
-NUUR SHAHILA AISYAH
+let hobbies=[
+
+`<center>
+
+<img src="image/hobby1.jpg"
+onclick="onClick(this)"
+alt="Reading">
+
+</center>
+
+<h2 style="color:#2563EB;margin-top:20px;">
+📚 Reading
 </h2>
-
-<p style="font-size:20px;color:#666;">
-<i>"Aspiring Information Technology Student"</i>
-</p>
 
 <p>
-A dedicated and motivated student currently pursuing
-a Diploma in Information Technology (Networking)
-at Politeknik Sultan Idris Shah. This portfolio website
-showcases personal background, academic achievements,
-experiences, education, family and memorable moments
-throughout the learning journey.
-</p>
+Reading books, articles and online resources
+helps me gain new knowledge, improve critical
+thinking skills and expand my understanding
+of different subjects and technologies.
+</p>`,
 
-<table>
+`<center>
 
-<tr>
-<td>Full Name</td>
-<td>NUUR SHAHILA AISYAH</td>
-</tr>
+<img src="image/hobby2.jpg"
+onclick="onClick(this)"
+alt="Traveling">
 
-<tr>
-<td>Student ID</td>
-<td>2024991167</td>
-</tr>
+</center>
 
-<tr>
-<td>Programme</td>
-<td>Diploma in Information Technology (Networking)</td>
-</tr>
-
-<tr>
-<td>Institution</td>
-<td>Politeknik Sultan Idris Shah</td>
-</tr>
-
-<tr>
-<td>Nationality</td>
-<td>Malaysian</td>
-</tr>
-
-<tr>
-<td>Email</td>
-<td>your@email.com</td>
-</tr>
-
-<tr>
-<td>Languages</td>
-<td>Malay, English</td>
-</tr>
-
-<tr>
-<td>Skills</td>
-<td>
-HTML, CSS, Networking,
-Microsoft 365, Active Directory,
-IT Support
-</td>
-</tr>
-
-<tr>
-<td>Career Interest</td>
-<td>
-Network Administration,
-System Administration,
-IT Support
-</td>
-</tr>
-
-</table>
-
-</div>
-
-</div>
-
-<!-- HOBBIES SECTION -->
-
-<div style="margin-top:50px;">
-
-<h2 class="section-title">
-Hobbies & Personal Interests
+<h2 style="color:#2563EB;margin-top:20px;">
+✈️ Traveling
 </h2>
 
-<p style="text-align:center;">
-Click any button below to explore my hobbies
-and personal interests.
-</p>
+<p>
+Traveling allows me to explore new places,
+experience different cultures and create
+valuable memories while learning from
+various environments and communities.
+</p>`,
 
-<div class="gallery-buttons">
+`<center>
 
-<button class="gallery-btn"
-onclick="showHobby(1)">
-📚 Reading
-</button>
+<img src="image/hobby3.jpg"
+onclick="onClick(this)"
+alt="Photography">
 
-<button class="gallery-btn"
-onclick="showHobby(2)">
-✈️ Traveling
-</button>
+</center>
 
-<button class="gallery-btn"
-onclick="showHobby(3)">
+<h2 style="color:#2563EB;margin-top:20px;">
 📸 Photography
-</button>
+</h2>
 
-</div>
+<p>
+Photography helps me capture meaningful
+moments, beautiful scenery and memorable
+experiences while expressing creativity
+through visual storytelling.
+</p>`
 
-<div id="hobbyPanel"
-class="gallery-content">
-</div>
+];
 
-</div>
+function showHobby(no){
 
-</div>
+var panel =
+document.getElementById("hobbyPanel");
+
+panel.style.display = "block";
+
+panel.innerHTML =
+hobbies[no-1];
+
+window.scrollTo({
+top: panel.offsetTop - 100,
+behavior: "smooth"
+});
+
+}
+
+function onClick(element){
+
+document.getElementById("imgModal").style.display =
+"block";
+
+document.getElementById("modalImg").src =
+element.src;
+
+document.getElementById("caption").innerHTML =
+element.alt;
+
+}
+
 window.onclick = function(event){
 
 var modal =
