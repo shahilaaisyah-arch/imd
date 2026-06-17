@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Family | IMD318 Personal Space</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:"Times New Roman", Times, serif;
+background:#F4F8FC;
+color:#000;
+}
+
+/* HEADER */
+
+.header{
+background:#2563EB;
+color:white;
+text-align:center;
+padding:15px;
+font-size:24px;
+font-weight:bold;
+letter-spacing:1px;
+}
+
+.header span{
+font-size:14px;
+}
+
+/* NAVIGATION */
+
+nav{
+background:#0F172A;
+padding:15px;
+position:relative;
+text-align:center;
+}
+
+.nav-links{
+display:flex;
+justify-content:center;
+align-items:center;
+flex-wrap:wrap;
+gap:20px;
+}
+
+.nav-links a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+position:relative;
+font-size:15px;
+padding:5px;
+}
+
+.nav-links a::after{
+content:"";
+width:0%;
+height:2px;
+background:silver;
+position:absolute;
+left:0;
+bottom:-4px;
+transition:0.3s;
+}
+
+.nav-links a:hover::after{
+width:100%;
+}
+
+.active-page{
+color:#87CEFA !important;
+}
+
+.menu-toggle{
+display:none;
+font-size:24px;
+color:white;
+font-weight:bold;
+cursor:pointer;
+text-align:left;
+}
+
+/* HERO */
+
+.page-banner{
+background:linear-gradient(
+135deg,
+#0F172A,
+#2563EB,
+#C0C0C0
+);
+color:white;
+text-align:center;
+padding:70px 20px;
+}
+
+.page-banner h1{
+font-size:50px;
+margin-bottom:15px;
+}
+
+.page-banner p{
+font-size:18px;
+max-width:800px;
+margin:auto;
+line-height:1.8;
+}
+
+/* CONTENT */
+
+.container{
+max-width:1100px;
+margin:40px auto;
+padding:25px;
+background:white;
+border-radius:10px;
+box-shadow:0 4px 12px rgba(0,0,0,.1);
+}
+
+.section-title{
+color:#2563EB;
+border-bottom:2px solid #2563EB;
+padding-bottom:10px;
+margin-bottom:30px;
+}
+
+/* BUTTONS */
+
+.family-buttons{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:12px;
+margin-top:25px;
+margin-bottom:25px;
+}
+
+.family-btn{
+padding:12px;
+border:none;
+background:#2563EB;
+color:white;
+font-weight:bold;
+border-radius:8px;
+cursor:pointer;
+transition:.3s;
+font-family:"Times New Roman";
+}
+
+.family-btn:hover{
+background:#1D4ED8;
+transform:translateY(-3px);
+}
+
+.family-content{
+display:none;
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 4px 12px rgba(0,0,0,.1);
+margin-top:20px;
+}
+
+.family-content img{
+width:100%;
+max-width:500px;
+display:block;
+margin:auto;
+border-radius:10px;
+margin-bottom:20px;
+}
+
+/* FOOTER */
+
+footer{
+background:#2563EB;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.header{
+font-size:18px;
+}
+
+.menu-toggle{
+display:block;
+}
+
+.nav-links{
+display:none;
+flex-direction:column;
+margin-top:15px;
+}
+
+.nav-links.active{
+display:flex;
+}
+
+.page-banner h1{
+font-size:35px;
+}
+
+.container{
+width:95%;
+padding:20px;
+}
+
+.family-buttons{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="header">
+IMD318 PERSONAL DIGITAL SPACE<br>
+<span>Information Management Portfolio</span>
+</div>
+
+<nav>
+
+<div class="menu-toggle" onclick="toggleMenu()">
+☰ Menu
+</div>
+
+<div class="nav-links" id="navLinks">
+
+<a href="index.html">Home</a>
+<a href="biodata.html">Biodata</a>
+<a href="experience.html">Experience</a>
+<a href="education.html">Education</a>
+<a href="family.html" class="active-page">Family</a>
+<a href="gallery.html">Gallery</a>
+
+</div>
+
+</nav>
+
+<div class="page-banner">
+
+<h1>Family Chronicle</h1>
+
+<p>
+The people who inspire, support and motivate me
+throughout my academic and personal journey.
+</p>
+
+</div>
+
+<!-- FAMILY CONTENT -->
+<div class="container">
+
+<h2 class="section-title">
+Family Information
+</h2>
+
+<p>
+My family has always been the greatest source of
+motivation, encouragement and support throughout
+my academic journey. Their guidance and sacrifices
+have played an important role in helping me achieve
+my goals and continue pursuing success.
+</p>
+
+<div class="family-buttons">
+
+<button class="family-btn"
+onclick="showFamily(1)">
+👨‍👩‍👧‍👦 Family Photo
+</button>
+
+<button class="family-btn"
+onclick="showFamily(2)">
+👨 Father
+</button>
+
+<button class="family-btn"
+onclick="showFamily(3)">
+👩 Mother
+</button>
+
+<button class="family-btn"
+onclick="showFamily(4)">
+👧 Siblings
+</button>
+
+<button class="family-btn"
+onclick="showFamily(5)">
+❤️ Family Values
+</button>
+
+<button class="family-btn"
+onclick="showFamily(6)">
+📸 Activities
+</button>
+
+</div>
+
+<div id="familyPanel"
+class="family-content">
+</div>
+
+</div>
+
+<script>
+
+let family=[
+
+/* FAMILY PHOTO */
+
+`<center>
+
+<img src="image/fam.JPG"
+style="max-width:500px;width:100%;border-radius:10px;">
+
+</center>
+
+<h2>Our Family</h2>
+
+<p>
+Family is the foundation of love, support and
+encouragement in my life. They have always been
+present throughout my educational journey and
+continue to motivate me to achieve my goals.
+</p>`,
+
+/* FATHER */
+
+`<h2>Father</h2>
+
+<p><b>Name:</b> Abd Aziz bin Daud</p>
+
+<p><b>Occupation:</b> Clerk</p>
+
+<p>
+My father is a hardworking and responsible
+individual who always encourages me to remain
+disciplined, determined and committed in
+everything that I do.
+</p>`,
+
+/* MOTHER */
+
+`<h2>Mother</h2>
+
+<p><b>Name:</b> Azizah Binti Ahmad</p>
+
+<p><b>Occupation:</b> Banker / Teacher</p>
+
+<p>
+My mother is a caring and supportive person
+who continuously provides guidance, motivation
+and encouragement throughout my studies and
+daily life.
+</p>`,
+
+/* SIBLINGS */
+
+`<h2>Siblings</h2>
+
+<p>
+My siblings are an important part of my life.
+We support one another, share experiences and
+create memorable moments together as a family.
+</p>
+
+<ul>
+
+<li>Support each other academically.</li>
+
+<li>Share responsibilities at home.</li>
+
+<li>Spend quality time together.</li>
+
+<li
+
+<li>Celebrate achievements and special occasions.</li>
+
+</ul>`,
+
+/* FAMILY VALUES */
+
+`<h2>Family Values</h2>
+
+<ul style="line-height:2;">
+
+<li><b>Unity</b> - Supporting each other through every challenge.</li>
+
+<li><b>Respect</b> - Treating family members with kindness and understanding.</li>
+
+<li><b>Education</b> - Encouraging continuous learning and self-improvement.</li>
+
+<li><b>Integrity</b> - Being honest, responsible and trustworthy.</li>
+
+<li><b>Love</b> - Maintaining strong relationships and appreciation.</li>
+
+</ul>`,
+
+/* ACTIVITIES */
+
+`<h2>Family Activities</h2>
+
+<p>
+Some of the activities that we enjoy together include:
+</p>
+
+<ul style="line-height:2;">
+
+<li>Family gatherings and celebrations.</li>
+
+<li>Visiting relatives during festive seasons.</li>
+
+<li>Travelling and sightseeing.</li>
+
+<li>Dining together.</li>
+
+<li>Taking family photographs and creating memories.</li>
+
+</ul>
+
+<center>
+
+<img src="image/family_activity.jpg"
+style="max-width:500px;width:100%;border-radius:10px;">
+
+</center>`
+
+];
+
+function showFamily(no){
+
+var panel =
+document.getElementById("familyPanel");
+
+panel.style.display = "block";
+
+panel.innerHTML = family[no-1];
+
+window.scrollTo({
+top: panel.offsetTop - 100,
+behavior: "smooth"
+});
+
+}
+
+function toggleMenu(){
+
+var menu =
+document.getElementById("navLinks");
+
+menu.classList.toggle("active");
+
+}
+
+</script>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+<b>Statement of Responsibility:</b>
+</p>
+
+<p>
+This website is designed and maintained wholly by
+NUUR SHAHILA AISYAH
+(ID: 2024991167)
+for fulfillment of the IMD318 coursework requirement.
+</p>
+
+<p>
+Created: June 2026 |
+Last Updated: June 2026
+</p>
+
+</footer>
+
+</body>
+</html>
