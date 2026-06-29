@@ -1,0 +1,643 @@
+
+
+
+<!DOCTYPE html>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<html>
+<head><script type="text/javascript" src="/OnlinePSH/ruxitagentjs_ICA7NQVfhqrux_10339260603164134.js" data-dtconfig="rid=RID_-1956872562|rpid=-632430456|domain=utem.edu.my|reportUrl=/OnlinePSH/rb_802ce832-4558-402d-bbf2-3194370dc4df|app=ea7c4b59f27d43eb|owasp=1|featureHash=ICA7NQVfhqrux|msl=153600|srsr=80000|rdnt=1|uxrgce=1|cuc=nndofdhp|srms=2,1,0,0%2Ftextarea%2Cinput%2Cselect%2Coption;0%2Fdatalist;0%2Fform%20button;0%2F%5Bdata-dtrum-input%5D;0%2F.data-dtrum-input;1%2F%5Edata%28%28%5C-.%2B%24%29%7C%24%29|mel=100000|expw=1|dpvc=1|md=mdcc1=a^lbstrong id^e^dqtextNamaUser^dq^rb^lb/strong^rb,mdcc2=astrong#textNamaUser,mdcc3=a@strong#textNamaUser|lastModification=1782385588037|postfix=nndofdhp|tp=500,50,0|srbbv=2|agentUri=/OnlinePSH/ruxitagentjs_ICA7NQVfhqrux_10339260603164134.js"></script><link href="css/bootstrap.min.css" rel="stylesheet" /><link href="css/4.1.1/bootstrap.min.css" rel="stylesheet" /><link href="css/PBond.css?ver=now" rel="stylesheet" /><link href="css/fontawesome/all.min.css" rel="stylesheet" /><link href="css/fontawesome/brands.css" rel="stylesheet" /><link href="css/fontawesome/solid.css" rel="stylesheet" /><link rel="stylesheet" href="https://cdn.datatables.net/2.1.2/css/dataTables.dataTables.css" /><link rel="stylesheet" href="css/select2.min.css" type="text/css" /><link href="Scripts/Calendar/bootstrap-datepicker.min.css" rel="stylesheet" />
+
+ <script src="Scripts/bootstrap.min.js" ></script>
+ <script src="/OnlinePSH/Scripts/jquery.min.js"></script>
+
+
+
+
+ <script src="/OnlinePSH/Scripts/fnPPSH.js?v=now"  type="text/javascript"></script>
+ <script src="/OnlinePSH/Scripts/bootstrap-datepicker.min.js"  ></script>
+     <script src="/OnlinePSH/Scripts/bootstrap.bundle.min.js"  ></script>
+   
+
+
+
+
+    
+     <script src="/OnlinePSH/Scripts/popper.min.js"  ></script>
+     <script src=  "/OnlinePSH/Scripts/select2.min.js">	</script>	
+    <script src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>
+<script src="https://cdn.datatables.net/buttons/3.2.0/js/dataTables.buttons.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+ <script src="https://cdn.datatables.net/buttons/3.2.0/js/buttons.html5.min.js"></script>
+ <script src="https://cdn.datatables.net/buttons/3.2.0/js/buttons.print.min.js"></script>
+        
+
+
+    <title>
+	Online Application PPSH
+</title>
+</head>
+
+    
+<body>
+     <style>
+    
+
+     .card-header .title {
+    font-size: 20px;
+    color: white;
+}
+.accicon {
+  float: right;
+  font-size: 20px;  
+  width: 1.2em;
+}
+.card-header{
+  cursor: pointer;
+  border: 1px solid #ddd ;
+  background: #02909b;
+  color: white;
+}
+.card{
+  border: 1px solid #ddd;
+}
+.card-body{
+  border-top: 1px solid #ddd;
+}
+.card-header:not(.collapsed) .rotate-icon {
+  transform: rotate(180deg);
+}
+
+        .row-body {
+            padding-top : 1.25em;
+            padding-left : 1px;
+        }
+
+.submenu {
+    margin-bottom: -0.5rem;
+    cursor: pointer;
+}
+
+
+
+
+
+/*Arrow Step*/
+#flowBoxes {
+    margin:auto;
+    padding:20px;
+    min-width:700px;
+
+}
+#flowBoxes div {
+    display:inline-block;
+    position:relative;
+    height:45px;
+    line-height:38px;
+    padding:0 32px;
+    border:1px solid #ccc;
+    margin-right:17px;
+    background-color:white;
+}
+
+#flowBoxes div.right:after{
+    content:'';
+    border-top:1px solid #ccc;
+    border-right:1px solid #ccc;
+    width:30px;
+    height:32px;
+    position:absolute;
+    right:0;
+    top:-1px;
+    background-color:white;
+    z-index:150;
+    
+    -webkit-transform: translate(16px,7px) rotate(45deg);
+       -moz-transform: translate(16px,7px) rotate(45deg);
+        -ms-transform: translate(16px,7px) rotate(45deg);
+         -o-transform: translate(16px,7px) rotate(20deg); 
+            transform: translate(16px,7px) rotate(45deg);
+}
+
+#flowBoxes div.left:before{
+    content:'';
+    border-top:1px solid #ccc;
+    border-right:1px solid #ccc;
+    width:30px;
+    height:32px;
+    position:absolute;
+    left:0;
+    top:-1px;
+    background-color:white;
+    z-index:50;
+    
+    -webkit-transform: translate(-16px,7px) rotate(45deg);
+       -moz-transform: translate(-16px,7px) rotate(45deg);
+        -ms-transform: translate(-16px,7px) rotate(45deg);
+         -o-transform: translate(-16px,7px) rotate(20deg);
+            transform: translate(-16px,7px)rotate(45deg);
+}
+#flowBoxes .active{
+    background-color:green;
+    color:white;
+}
+#flowBoxes div.active:after{
+    background-color:green;
+}
+#NamaCalon {
+  color: white;
+}
+
+
+   
+
+	.select2-container--default .select2-selection--single {
+    background-color: rgb(255, 255, 255);
+    border-width: 1px;
+    border-style: solid;
+   /* border-color: black;*/
+    border-image: initial;
+    border-radius: 4px;
+}	 
+		 
+	.select2-container .select2-selection--single {
+    box-sizing: border-box;
+    cursor: pointer;
+    display: block;
+    height: 38px;
+    user-select: none;
+    -webkit-user-select: none;
+}	 
+		 
+	.select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: #000000;
+    line-height: 36px;
+}
+		 
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 35px;
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    width: 20px;
+}		 
+		 
+	.select2-container--default .select2-selection--single .select2-selection__arrow b {
+    border-color: black transparent transparent transparent;
+    border-style: solid;
+    border-width: 5px 4px 0 4px;
+    height: 0;
+    left: 50%;
+    margin-left: -4px;
+    margin-top: -2px;
+    position: absolute;
+    top: 50%;
+    width: 0;
+}
+
+    </style>
+  
+    <form method="post" action="./Dokumen.aspx" id="form1" enctype="multipart/form-data">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJMTU4Mjk1ODgwD2QWAmYPZBYCAgMPFgIeB2VuY3R5cGUFE211bHRpcGFydC9mb3JtLWRhdGEWCgIFDw8WAh4EVGV4dAUkTlVVUiBTSEFISUxBIEFJU1lBSCBCSU5USSBNT0hEIFpBQUlaZGQCCQ8PFgIeB1Zpc2libGVoZGQCDw8WAh8CZxYQAgEPDxYCHghJbWFnZVVybAUWYm1fcGVtb2hvbk5vbkFrdGlmLnBuZ2RkAgMPDxYCHwMFGGJtX3Bla2VyamFhbk5vbkFrdGlmLnBuZ2RkAgUPDxYCHwMFIGJtX2tlcHV0dXNhbkFrYWRlbWlrTm9uQWt0aWYucG5nZGQCBw8PFgIfAwUWYm1fcnVqdWthbk5vbkFrdGlmLnBuZ2RkAgkPDxYCHwMFGWJtX3BlbWJheWFyYW5Ob25Ba3RpZi5wbmdkZAILDw8WAh8DBRNibV9kb2t1bWVuQWt0aWYucG5nZGQCDQ8PFgIfAwUYYm1fcmluZ2thc2FuTm9uQWt0aWYucG5nZGQCDw8PFgIfAwUSc3RhdHVzTm9uQWt0aWYucG5nZGQCEQ9kFgICAQ8WAh4Dc3JjBRRiYW5uZXJTeXN0ZW1TUFNILnBuZ2QCEw9kFgoCAQ8WAh4JaW5uZXJodG1sBQdEb2t1bWVuZAIDDxYCHwUFD1NFTkFSQUkgRE9LVU1FTmQCBQ8WAh8FBUkqU2lsYSBNdWF0IE5haWsgc2V0aWFwIGRva3VtZW4geWFuZyBkaXNlbmFyYWlrYW4gZGkgYmF3YWgoTWF4IFNpemUgNU1CKTotZAIHDxYCHwUFICpTaWxhIFBhbGFuZyBwYWRhIHNldGlhcCBkb2t1bWVuZAIJDzwrABEDAA8WBB4LXyFEYXRhQm91bmRnHgtfIUl0ZW1Db3VudAINZAEQFgAWABYADBQrAAAWAmYPZBYgZg9kFgYCBQ8PFgIfAQUHQlVUSVJBTmRkAgcPDxYCHwEFCU5BTUEgRkFJTGRkAgkPDxYCHwEFBUhBUFVTZGQCAQ9kFhRmDw8WAh8BBQExZGQCAQ8PFgIfAQUCMDFkZAICDw8WAh8BBQYxMDY3NjNkZAIDDw8WAh8BBQYyNzMyODBkZAIEDw8WAh8BBQwwNTA0MjQwMzE0NTZkZAIFD2QWAgIBDw8WAh8BBTJHQU1CQVIgQkVSVUtVUkFO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XxYWBQ5jdGwwMCRJbWdNYWxheQUMY3RsMDAkSW1nRW5nBRFjdGwwMCRidG5QZXJpYmFkaQUOY3RsMDAkYnRuS2VyamEFDWN0bDAwJGJ0bkFrYWQFDmN0bDAwJGJ0blJ1anVrBQxjdGwwMCRidG5CeXIFDGN0bDAwJGJ0bkRvawUNY3RsMDAkYnRuUmluZwUNY3RsMDAkYnRuU3RhdAU0Y3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRndkRvY3VtZW50JGN0bDAzJGJ0blN1Ym1pdAU0Y3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRndkRvY3VtZW50JGN0bDA0JGJ0blN1Ym1pdAU0Y3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRndkRvY3VtZW50JGN0bDA1JGJ0blN1Ym1pdAU0Y3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRndkRvY3VtZW50JGN0bDA2JGJ0blN1Ym1pdAU0Y3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRndkRvY3VtZW50JGN0bDA3JGJ0blN1Ym1pdAU0Y3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRndkRvY3VtZW50JGN0bDA4JGJ0blN1Ym1pdAU0Y3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRndkRvY3VtZW50JGN0bDA5JGJ0blN1Ym1pdAU0Y3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRndkRvY3VtZW50JGN0bDEwJGJ0blN1Ym1pdAU0Y3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRndkRvY3VtZW50JGN0bDExJGJ0blN1Ym1pdAU0Y3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRndkRvY3VtZW50JGN0bDEyJGJ0blN1Ym1pdAU0Y3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRndkRvY3VtZW50JGN0bDEzJGJ0blN1Ym1pdAU0Y3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRndkRvY3VtZW50JGN0bDE0JGJ0blN1Ym1pdAUkY3RsMDAkQ29udGVudFBsYWNlSG9sZGVyMSRndkRvY3VtZW50DzwrAAwBCAIBZMhwg3NwXQLrFZhUbrKcbdlkKJvGhrLt51GCKZP6xScc" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="6F90E915" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdACvla2rUODOaHeWog+mHkjZRR0a6PYjeNe08BlJcphrUYCKYb3/d5HKFEmSVeJs1TcqFMjMPCDmdir1T6Brl4ArSTkoS+EKrv5kjnDeJMW5gNZgkluIDNdjO8LLFGsZ6k+3ZuxBFWOiMlakIPWrXzmyQVcsvm8yzeVjSPdrB5MW82ousiZHxa8Fq3beYDCmXxD5+GO13ScCb+AwioFOy7WY0GJE/txYTrLNpePTtMstSXp4gHmRqwFhCw23Vhj6+lfQV9nkzYGbIGmjYICXLySn00C935rEVnelMW56rGc8CMarkKT2Yb39hk4Y8FbROhc69c9uyBhmROP+WjzVaY44/AFFDjAeo2KonSMcXR1aUfB9h0VWG9+RhL7znVHrS2jXLKQgA6tjB/C90wgBx3CGfyYej6OW/Na7RRK5F9m06fjc0619pqdwWN1louxQRVLTy/1gluTlHUB7q4P+S3dO1MhozsB2L/UL077pEoYHijXWQoKI4XL+xmNSMfYp+zxVCz/wbkE/uNwaZxYq5kcdbXwcQGZehy/MhJCSxCHbELJibAluVhDzhfg0rPsXigkDkEDwDTsVCvNpO9UqqvFBcrstVD/qD9UBdMzE/yFvJ2ILg+L083iI2Rl3NmoCMEBsloz0v8kjwb+7MBhwmSXcZB+klmTt1e7IvGN+dHhsn7zleLZFv0RAWI6kOy99AyoPH4wPLrWXs5D/39GR/OLvhtEOOyM0Fs6GUUtYmljGhTlDKpfAzxa5+mlpHk6s+cW9dBGm6V0VlTNDqix2F9G3FBPY5zXpOM+LF0KddTZUN+2EZ0uW15K4rIkXc9W3lC07pBjQHet2Q100WrnvtA2kxi7cnaULZreLO1iJtnNgl51nzkuuFB5cRkmbzK9WJYfdYi4NLKdvVrjh760dFCFdSzlq9sWoGE1pltIzYSLTiYOk54PTYhZwiU1lLOVNwZJc=" />
+</div>
+        
+                       <nav class="navigate">
+                      <div class="container-fluid">
+                        <a class="navbar-brand" href="defaultNew.aspx">
+                          <img src="logoUTeM.png" style="padding-top:3px;padding-left:5px;max-height:40px;"/>
+                         
+                        </a>
+                        <label class="Tajuktatas">Pusat Perkhidmatan Pendidikan Lanjutan & Berterusan Universiti Teknikal Malaysia Melaka</label>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                            <span class="navbar-toggler-icon"></span>
+                          </button>
+                          <input type="image" name="ctl00$ImgMalay" id="ImgMalay" class="img-responsive BM" title="Bahasa Melayu" src="malaysia.png" style="height:30px;width:30px;" />
+                          <input type="image" name="ctl00$ImgEng" id="ImgEng" class="img-responsive BI" title="English(UK)" src="united-kingdom.png" style="height:30px;width:30px;" />
+                          
+                          <a id="NamaCalon" class="LogNama dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">NUUR SHAHILA AISYAH BINTI MOHD ZAAIZ</a> 
+                          
+                           <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <a onclick="return confirm(&#39;Adakah anda ingin keluar?&#39;);" id="SignOutUsr" class="dropdown-item LogKeluar" href="javascript:__doPostBack(&#39;ctl00$SignOutUsr&#39;,&#39;&#39;)" style="color:Black;font-weight:bold;">Keluar</a>
+                            
+                            
+                            
+                          
+                      </div>
+                     
+                    
+                       </div>
+                    </nav>
+       <div id="ContenPanel">
+           <div id="MenuLog" class="card MenuLog ">
+            
+
+           
+                        <div class="col-lg-16">
+                                    
+                           
+
+                       
+                             
+                            <input type="image" name="ctl00$btnPeribadi" id="btnPeribadi" src="bm_pemohonNonAktif.png" /> 
+                             
+                           
+                            <input type="image" name="ctl00$btnKerja" id="btnKerja" src="bm_pekerjaanNonAktif.png" /> 
+                             
+                      
+                            <input type="image" name="ctl00$btnAkad" id="btnAkad" src="bm_keputusanAkademikNonAktif.png" />
+                          
+                             
+                            <input type="image" name="ctl00$btnRujuk" id="btnRujuk" src="bm_rujukanNonAktif.png" />
+                          
+                             <input type="image" name="ctl00$btnByr" id="btnByr" src="bm_pembayaranNonAktif.png" />
+                   
+                         
+                            <input type="image" name="ctl00$btnDok" id="btnDok" src="bm_dokumenAktif.png" />
+                  
+                         
+                            <input type="image" name="ctl00$btnRing" id="btnRing" src="bm_ringkasanNonAktif.png" />
+                            
+                   
+                         
+                          <input type="image" name="ctl00$btnStat" id="btnStat" src="statusNonAktif.png" />
+                          
+                    
+
+                        
+                    
+                    
+                </div>
+            </div>     
+                    
+           <section class="sectionlogin">
+                  
+
+              
+               
+
+                 
+                    
+                    
+             
+            
+
+     <style>
+    .rounded-t-5 {
+      border-top-left-radius: 0.5rem;
+      border-top-right-radius: 0.5rem;
+    }
+
+    @media (min-width: 992px) {
+      .rounded-tr-lg-0 {
+        border-top-right-radius: 0;
+      }
+
+      .rounded-bl-lg-5 {
+        border-bottom-left-radius: 0.5rem;
+      }
+    }
+     .sectionlogin {
+      width:79%;
+      margin : 90px auto;
+     }
+
+   
+
+
+    .datepicker {
+        margin-top: 106px;
+    }
+
+   .syarat{
+       font-size: 11px;
+   }
+    .NamaP {
+        width : 180px;
+      
+         }
+         .datedd {
+              width : 180px;
+
+         }
+.InPanjang {
+    width:500px;
+}
+
+
+
+  </style>
+
+     <div class="card ppshp" >
+                <h2><label id="ContentPlaceHolder1_lblTDokumen" for="firstName">Dokumen</label></h2> <br />
+                <div class="form-Container">
+               
+
+                     <div class="card-header " id="RujukD" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <span class="title"> 
+                       <label id="ContentPlaceHolder1_lblSenDok" for="firstName" class="submenu">SENARAI DOKUMEN</label> </span> 
+
+                       
+                    </div> 
+
+                  
+                        
+                    <label id="ContentPlaceHolder1_lblInstDok" class="form-label" style="color:red;" for="firstName">*Sila Muat Naik setiap dokumen yang disenaraikan di bawah(Max Size 5MB):-</label><br />
+                    <label id="ContentPlaceHolder1_lblSt" class="form-label" style="color:red;" for="firstName">*Sila Palang pada setiap dokumen</label>
+                             
+                <div class="row-body"> 
+
+                    <div class="row">
+                        <div class="col-lg-12 mb-3">
+                       
+                                   <div>
+	<table class="gridViewTable" cellspacing="0" rules="all" border="1" id="ContentPlaceHolder1_gvDocument" style="width:100%;border-collapse:collapse;">
+		<tr class="gridViewHeader" style="color:White;">
+			<th class="PeribadiM" align="center" scope="col" style="width:2%;">No.</th><th class="hidden" scope="col" style="width:2%;">Hidden</th><th class="hidden" scope="col" style="width:2%;">Hidden</th><th class="hidden" scope="col" style="width:2%;">Hidden</th><th class="hidden" scope="col" style="width:2%;">Hidden</th><th class="PeribadiM" align="center" scope="col" style="width:25%;">BUTIRAN</th><th class="PeribadiM" scope="col" style="width:15%;">&nbsp;</th><th class="PeribadiM" align="center" scope="col" style="width:10%;">NAMA FAIL</th><th class="hidden" scope="col" style="width:2%;">Hidden</th><th class="PeribadiM" scope="col" style="width:5%;">HAPUS</th>
+		</tr><tr>
+			<td valign="middle" style="height:20px;">1</td><td class="hidden" valign="top">01</td><td class="hidden" valign="top">106763</td><td class="hidden" valign="top">273280</td><td class="hidden" valign="top">050424031456</td><td valign="middle">
+                                                     <span id="ContentPlaceHolder1_gvDocument_lblButiran_0" class="butirannnP" onmouseover="this.className=&#39;butiranP&#39;">GAMBAR BERUKURAN PASSPORT - image/jpeg fail sahaja</span>
+                                                      
+                                                  
+                                           
+                                                  
+                                                </td><td>
+                                                    
+                                                    
+                                                </td><td align="center">
+			                               
+                                                <a id="ContentPlaceHolder1_gvDocument_FilePel_0" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$gvDocument$ctl02$FilePel&#39;,&#39;&#39;)">050424031456_01.jpg</a>
+			                                </td><td class="hidden" valign="top">050424031456_01.jpg</td><td align="center">
+                                                     
+                                                </td>
+		</tr><tr class="gridViewAlternating">
+			<td valign="middle" style="height:20px;">2</td><td class="hidden" valign="top">02</td><td class="hidden" valign="top">106778</td><td class="hidden" valign="top">273280</td><td class="hidden" valign="top">050424031456</td><td valign="middle">
+                                                     <span id="ContentPlaceHolder1_gvDocument_lblButiran_1" class="butirannnP" onmouseover="this.className=&#39;butiranP&#39;">SIJIL AKADEMIK SPM - pdf fail sahaja</span>
+                                                      
+                                                  
+                                           
+                                                  
+                                                </td><td>
+                                                    <input type="file" name="ctl00$ContentPlaceHolder1$gvDocument$ctl03$FU_Pic" id="ContentPlaceHolder1_gvDocument_FU_Pic_1" disabled="disabled" class="aspNetDisabled" style="width:200px;" />
+                                                    <input type="image" name="ctl00$ContentPlaceHolder1$gvDocument$ctl03$btnSubmit" id="ContentPlaceHolder1_gvDocument_btnSubmit_1" disabled="disabled" class="aspNetDisabled" src="file.png" alt="MuatNaik" align="bottom" style="border-style:None;height:33px;width:35px;" />
+                                                </td><td align="center">
+			                               
+                                                <a id="ContentPlaceHolder1_gvDocument_FilePel_1" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$gvDocument$ctl03$FilePel&#39;,&#39;&#39;)">050424031456_02.pdf</a>
+			                                </td><td class="hidden" valign="top">050424031456_02.pdf</td><td align="center">
+                                                     <a onclick="if (!window.confirm(&#39;Are you sure want to delete this record?&#39;)) return false;" id="ContentPlaceHolder1_gvDocument_lnkDelete_1" class="btn " href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$gvDocument$ctl03$lnkDelete&#39;,&#39;&#39;)" style="display:inline-block;border-style:None;height:33px;width:100px;"><img id="ContentPlaceHolder1_gvDocument_Image1_1" src="ico_dustbin.png" style="width: 20px; height:20px;margin-top: -9px;" /></a>
+                                                </td>
+		</tr><tr>
+			<td valign="middle" style="height:20px;">3</td><td class="hidden" valign="top">03</td><td class="hidden" valign="top">&nbsp;</td><td class="hidden" valign="top">&nbsp;</td><td class="hidden" valign="top">&nbsp;</td><td valign="middle">
+                                                     <span id="ContentPlaceHolder1_gvDocument_lblButiran_2" class="butirannnP" onmouseover="this.className=&#39;butiranP&#39;">SIJIL PENCAPAIAN (JIKA ADA) - pdf fail sahaja</span>
+                                                      
+                                                  
+                                           
+                                                  
+                                                </td><td>
+                                                    <input type="file" name="ctl00$ContentPlaceHolder1$gvDocument$ctl04$FU_Pic" id="ContentPlaceHolder1_gvDocument_FU_Pic_2" style="width:200px;" />
+                                                    <input type="image" name="ctl00$ContentPlaceHolder1$gvDocument$ctl04$btnSubmit" id="ContentPlaceHolder1_gvDocument_btnSubmit_2" src="file.png" alt="MuatNaik" align="bottom" style="border-style:None;height:33px;width:35px;" />
+                                                </td><td align="center">
+			                               
+                                                <a id="ContentPlaceHolder1_gvDocument_FilePel_2" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$gvDocument$ctl04$FilePel&#39;,&#39;&#39;)"></a>
+			                                </td><td class="hidden" valign="top">-</td><td align="center">
+                                                     
+                                                </td>
+		</tr><tr class="gridViewAlternating">
+			<td valign="middle" style="height:20px;">4</td><td class="hidden" valign="top">04</td><td class="hidden" valign="top">&nbsp;</td><td class="hidden" valign="top">&nbsp;</td><td class="hidden" valign="top">&nbsp;</td><td valign="middle">
+                                                     <span id="ContentPlaceHolder1_gvDocument_lblButiran_3" class="butirannnP" onmouseover="this.className=&#39;butiranP&#39;">TRANSKRIP SIJIL PENCAPAIAN (JIKA ADA) - pdf fail sahaja</span>
+                                                      
+                                                  
+                                           
+                                                  
+                                                </td><td>
+                                                    <input type="file" name="ctl00$ContentPlaceHolder1$gvDocument$ctl05$FU_Pic" id="ContentPlaceHolder1_gvDocument_FU_Pic_3" style="width:200px;" />
+                                                    <input type="image" name="ctl00$ContentPlaceHolder1$gvDocument$ctl05$btnSubmit" id="ContentPlaceHolder1_gvDocument_btnSubmit_3" src="file.png" alt="MuatNaik" align="bottom" style="border-style:None;height:33px;width:35px;" />
+                                                </td><td align="center">
+			                               
+                                                <a id="ContentPlaceHolder1_gvDocument_FilePel_3" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$gvDocument$ctl05$FilePel&#39;,&#39;&#39;)"></a>
+			                                </td><td class="hidden" valign="top">-</td><td align="center">
+                                                     
+                                                </td>
+		</tr><tr>
+			<td valign="middle" style="height:20px;">5</td><td class="hidden" valign="top">05</td><td class="hidden" valign="top">106779</td><td class="hidden" valign="top">273280</td><td class="hidden" valign="top">050424031456</td><td valign="middle">
+                                                     <span id="ContentPlaceHolder1_gvDocument_lblButiran_4" class="butirannnP" onmouseover="this.className=&#39;butiranP&#39;">SIJIL KELAYAKAN STPM/ MATRIKULASI/DIPLOMA - pdf fail sahaja</span>
+                                                      
+                                                  
+                                           
+                                                  
+                                                </td><td>
+                                                    <input type="file" name="ctl00$ContentPlaceHolder1$gvDocument$ctl06$FU_Pic" id="ContentPlaceHolder1_gvDocument_FU_Pic_4" disabled="disabled" class="aspNetDisabled" style="width:200px;" />
+                                                    <input type="image" name="ctl00$ContentPlaceHolder1$gvDocument$ctl06$btnSubmit" id="ContentPlaceHolder1_gvDocument_btnSubmit_4" disabled="disabled" class="aspNetDisabled" src="file.png" alt="MuatNaik" align="bottom" style="border-style:None;height:33px;width:35px;" />
+                                                </td><td align="center">
+			                               
+                                                <a id="ContentPlaceHolder1_gvDocument_FilePel_4" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$gvDocument$ctl06$FilePel&#39;,&#39;&#39;)">050424031456_05.pdf</a>
+			                                </td><td class="hidden" valign="top">050424031456_05.pdf</td><td align="center">
+                                                     <a onclick="if (!window.confirm(&#39;Are you sure want to delete this record?&#39;)) return false;" id="ContentPlaceHolder1_gvDocument_lnkDelete_4" class="btn " href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$gvDocument$ctl06$lnkDelete&#39;,&#39;&#39;)" style="display:inline-block;border-style:None;height:33px;width:100px;"><img id="ContentPlaceHolder1_gvDocument_Image1_4" src="ico_dustbin.png" style="width: 20px; height:20px;margin-top: -9px;" /></a>
+                                                </td>
+		</tr><tr class="gridViewAlternating">
+			<td valign="middle" style="height:20px;">6</td><td class="hidden" valign="top">06</td><td class="hidden" valign="top">106780</td><td class="hidden" valign="top">273280</td><td class="hidden" valign="top">050424031456</td><td valign="middle">
+                                                     <span id="ContentPlaceHolder1_gvDocument_lblButiran_5" class="butirannnP" onmouseover="this.className=&#39;butiranP&#39;">SIJIL TRANSKRIP DIPLOMA(JIKA ADA) - pdf fail sahaja</span>
+                                                      
+                                                  
+                                           
+                                                  
+                                                </td><td>
+                                                    <input type="file" name="ctl00$ContentPlaceHolder1$gvDocument$ctl07$FU_Pic" id="ContentPlaceHolder1_gvDocument_FU_Pic_5" disabled="disabled" class="aspNetDisabled" style="width:200px;" />
+                                                    <input type="image" name="ctl00$ContentPlaceHolder1$gvDocument$ctl07$btnSubmit" id="ContentPlaceHolder1_gvDocument_btnSubmit_5" disabled="disabled" class="aspNetDisabled" src="file.png" alt="MuatNaik" align="bottom" style="border-style:None;height:33px;width:35px;" />
+                                                </td><td align="center">
+			                               
+                                                <a id="ContentPlaceHolder1_gvDocument_FilePel_5" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$gvDocument$ctl07$FilePel&#39;,&#39;&#39;)">050424031456_06.pdf</a>
+			                                </td><td class="hidden" valign="top">050424031456_06.pdf</td><td align="center">
+                                                     <a onclick="if (!window.confirm(&#39;Are you sure want to delete this record?&#39;)) return false;" id="ContentPlaceHolder1_gvDocument_lnkDelete_5" class="btn " href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$gvDocument$ctl07$lnkDelete&#39;,&#39;&#39;)" style="display:inline-block;border-style:None;height:33px;width:100px;"><img id="ContentPlaceHolder1_gvDocument_Image1_5" src="ico_dustbin.png" style="width: 20px; height:20px;margin-top: -9px;" /></a>
+                                                </td>
+		</tr><tr>
+			<td valign="middle" style="height:20px;">7</td><td class="hidden" valign="top">07</td><td class="hidden" valign="top">&nbsp;</td><td class="hidden" valign="top">&nbsp;</td><td class="hidden" valign="top">&nbsp;</td><td valign="middle">
+                                                     <span id="ContentPlaceHolder1_gvDocument_lblButiran_6" class="butirannnP" onmouseover="this.className=&#39;butiranP&#39;">SIJIL APEL (JIKA ADA) - pdf fail sahaja</span>
+                                                      
+                                                  
+                                           
+                                                  
+                                                </td><td>
+                                                    <input type="file" name="ctl00$ContentPlaceHolder1$gvDocument$ctl08$FU_Pic" id="ContentPlaceHolder1_gvDocument_FU_Pic_6" style="width:200px;" />
+                                                    <input type="image" name="ctl00$ContentPlaceHolder1$gvDocument$ctl08$btnSubmit" id="ContentPlaceHolder1_gvDocument_btnSubmit_6" src="file.png" alt="MuatNaik" align="bottom" style="border-style:None;height:33px;width:35px;" />
+                                                </td><td align="center">
+			                               
+                                                <a id="ContentPlaceHolder1_gvDocument_FilePel_6" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$gvDocument$ctl08$FilePel&#39;,&#39;&#39;)"></a>
+			                                </td><td class="hidden" valign="top">-</td><td align="center">
+                                                     
+                                                </td>
+		</tr><tr class="gridViewAlternating">
+			<td valign="middle" style="height:20px;">8</td><td class="hidden" valign="top">08</td><td class="hidden" valign="top">106781</td><td class="hidden" valign="top">273280</td><td class="hidden" valign="top">050424031456</td><td valign="middle">
+                                                     <span id="ContentPlaceHolder1_gvDocument_lblButiran_7" class="butirannnP" onmouseover="this.className=&#39;butiranP&#39;">SIJIL KEPUTUSAN MUET - pdf fail sahaja</span>
+                                                      
+                                                  
+                                           
+                                                  
+                                                </td><td>
+                                                    <input type="file" name="ctl00$ContentPlaceHolder1$gvDocument$ctl09$FU_Pic" id="ContentPlaceHolder1_gvDocument_FU_Pic_7" disabled="disabled" class="aspNetDisabled" style="width:200px;" />
+                                                    <input type="image" name="ctl00$ContentPlaceHolder1$gvDocument$ctl09$btnSubmit" id="ContentPlaceHolder1_gvDocument_btnSubmit_7" disabled="disabled" class="aspNetDisabled" src="file.png" alt="MuatNaik" align="bottom" style="border-style:None;height:33px;width:35px;" />
+                                                </td><td align="center">
+			                               
+                                                <a id="ContentPlaceHolder1_gvDocument_FilePel_7" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$gvDocument$ctl09$FilePel&#39;,&#39;&#39;)">050424031456_08.pdf</a>
+			                                </td><td class="hidden" valign="top">050424031456_08.pdf</td><td align="center">
+                                                     <a onclick="if (!window.confirm(&#39;Are you sure want to delete this record?&#39;)) return false;" id="ContentPlaceHolder1_gvDocument_lnkDelete_7" class="btn " href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$gvDocument$ctl09$lnkDelete&#39;,&#39;&#39;)" style="display:inline-block;border-style:None;height:33px;width:100px;"><img id="ContentPlaceHolder1_gvDocument_Image1_7" src="ico_dustbin.png" style="width: 20px; height:20px;margin-top: -9px;" /></a>
+                                                </td>
+		</tr><tr>
+			<td valign="middle" style="height:20px;">9</td><td class="hidden" valign="top">09</td><td class="hidden" valign="top">&nbsp;</td><td class="hidden" valign="top">&nbsp;</td><td class="hidden" valign="top">&nbsp;</td><td valign="middle">
+                                                     <span id="ContentPlaceHolder1_gvDocument_lblButiran_8" class="butirannnP" onmouseover="this.className=&#39;butiranP&#39;">SALINAN RESIT PEMBAYARAN WANG PROSES - pdf fail sahaja</span>
+                                                      
+                                                  
+                                           
+                                                  
+                                                </td><td>
+                                                    <input type="file" name="ctl00$ContentPlaceHolder1$gvDocument$ctl10$FU_Pic" id="ContentPlaceHolder1_gvDocument_FU_Pic_8" style="width:200px;" />
+                                                    <input type="image" name="ctl00$ContentPlaceHolder1$gvDocument$ctl10$btnSubmit" id="ContentPlaceHolder1_gvDocument_btnSubmit_8" src="file.png" alt="MuatNaik" align="bottom" style="border-style:None;height:33px;width:35px;" />
+                                                </td><td align="center">
+			                               
+                                                <a id="ContentPlaceHolder1_gvDocument_FilePel_8" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$gvDocument$ctl10$FilePel&#39;,&#39;&#39;)"></a>
+			                                </td><td class="hidden" valign="top">-</td><td align="center">
+                                                     
+                                                </td>
+		</tr><tr class="gridViewAlternating">
+			<td valign="middle" style="height:20px;">10</td><td class="hidden" valign="top">10</td><td class="hidden" valign="top">&nbsp;</td><td class="hidden" valign="top">&nbsp;</td><td class="hidden" valign="top">&nbsp;</td><td valign="middle">
+                                                     <span id="ContentPlaceHolder1_gvDocument_lblButiran_9" class="butirannnP" onmouseover="this.className=&#39;butiranP&#39;">SALINAN KWSP (JIKA ADA) - pdf fail sahaja</span>
+                                                      
+                                                  
+                                           
+                                                  
+                                                </td><td>
+                                                    <input type="file" name="ctl00$ContentPlaceHolder1$gvDocument$ctl11$FU_Pic" id="ContentPlaceHolder1_gvDocument_FU_Pic_9" style="width:200px;" />
+                                                    <input type="image" name="ctl00$ContentPlaceHolder1$gvDocument$ctl11$btnSubmit" id="ContentPlaceHolder1_gvDocument_btnSubmit_9" src="file.png" alt="MuatNaik" align="bottom" style="border-style:None;height:33px;width:35px;" />
+                                                </td><td align="center">
+			                               
+                                                <a id="ContentPlaceHolder1_gvDocument_FilePel_9" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$gvDocument$ctl11$FilePel&#39;,&#39;&#39;)"></a>
+			                                </td><td class="hidden" valign="top">-</td><td align="center">
+                                                     
+                                                </td>
+		</tr><tr>
+			<td valign="middle" style="height:20px;">11</td><td class="hidden" valign="top">11</td><td class="hidden" valign="top">&nbsp;</td><td class="hidden" valign="top">&nbsp;</td><td class="hidden" valign="top">&nbsp;</td><td valign="middle">
+                                                     <span id="ContentPlaceHolder1_gvDocument_lblButiran_10" class="butirannnP" onmouseover="this.className=&#39;butiranP&#39;">BORANG PENGESAHAN MAJIKAN - pdf fail sahaja</span>
+                                                      
+                                                  
+                                           
+                                                  
+                                                </td><td>
+                                                    <input type="file" name="ctl00$ContentPlaceHolder1$gvDocument$ctl12$FU_Pic" id="ContentPlaceHolder1_gvDocument_FU_Pic_10" style="width:200px;" />
+                                                    <input type="image" name="ctl00$ContentPlaceHolder1$gvDocument$ctl12$btnSubmit" id="ContentPlaceHolder1_gvDocument_btnSubmit_10" src="file.png" alt="MuatNaik" align="bottom" style="border-style:None;height:33px;width:35px;" />
+                                                </td><td align="center">
+			                               
+                                                <a id="ContentPlaceHolder1_gvDocument_FilePel_10" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$gvDocument$ctl12$FilePel&#39;,&#39;&#39;)"></a>
+			                                </td><td class="hidden" valign="top">-</td><td align="center">
+                                                     
+                                                </td>
+		</tr><tr class="gridViewAlternating">
+			<td valign="middle" style="height:20px;">12</td><td class="hidden" valign="top">12</td><td class="hidden" valign="top">106818</td><td class="hidden" valign="top">273280</td><td class="hidden" valign="top">050424031456</td><td valign="middle">
+                                                     <span id="ContentPlaceHolder1_gvDocument_lblButiran_11" class="butirannnP" onmouseover="this.className=&#39;butiranP&#39;">SLIP GAJI TERKINI - pdf fail sahaja</span>
+                                                      
+                                                  
+                                           
+                                                  
+                                                </td><td>
+                                                    <input type="file" name="ctl00$ContentPlaceHolder1$gvDocument$ctl13$FU_Pic" id="ContentPlaceHolder1_gvDocument_FU_Pic_11" disabled="disabled" class="aspNetDisabled" style="width:200px;" />
+                                                    <input type="image" name="ctl00$ContentPlaceHolder1$gvDocument$ctl13$btnSubmit" id="ContentPlaceHolder1_gvDocument_btnSubmit_11" disabled="disabled" class="aspNetDisabled" src="file.png" alt="MuatNaik" align="bottom" style="border-style:None;height:33px;width:35px;" />
+                                                </td><td align="center">
+			                               
+                                                <a id="ContentPlaceHolder1_gvDocument_FilePel_11" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$gvDocument$ctl13$FilePel&#39;,&#39;&#39;)">050424031456_12.pdf</a>
+			                                </td><td class="hidden" valign="top">050424031456_12.pdf</td><td align="center">
+                                                     <a onclick="if (!window.confirm(&#39;Are you sure want to delete this record?&#39;)) return false;" id="ContentPlaceHolder1_gvDocument_lnkDelete_11" class="btn " href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$gvDocument$ctl13$lnkDelete&#39;,&#39;&#39;)" style="display:inline-block;border-style:None;height:33px;width:100px;"><img id="ContentPlaceHolder1_gvDocument_Image1_11" src="ico_dustbin.png" style="width: 20px; height:20px;margin-top: -9px;" /></a>
+                                                </td>
+		</tr><tr>
+			<td valign="middle" style="height:20px;">13</td><td class="hidden" valign="top">13</td><td class="hidden" valign="top">106782</td><td class="hidden" valign="top">273280</td><td class="hidden" valign="top">050424031456</td><td valign="middle">
+                                                     <span id="ContentPlaceHolder1_gvDocument_lblButiran_12" class="butirannnP" onmouseover="this.className=&#39;butiranP&#39;">SALINAN AKREDITASI MQA - pdf fail sahaja</span>
+                                                      
+                                                  
+                                           
+                                                  
+                                                </td><td>
+                                                    <input type="file" name="ctl00$ContentPlaceHolder1$gvDocument$ctl14$FU_Pic" id="ContentPlaceHolder1_gvDocument_FU_Pic_12" disabled="disabled" class="aspNetDisabled" style="width:200px;" />
+                                                    <input type="image" name="ctl00$ContentPlaceHolder1$gvDocument$ctl14$btnSubmit" id="ContentPlaceHolder1_gvDocument_btnSubmit_12" disabled="disabled" class="aspNetDisabled" src="file.png" alt="MuatNaik" align="bottom" style="border-style:None;height:33px;width:35px;" />
+                                                </td><td align="center">
+			                               
+                                                <a id="ContentPlaceHolder1_gvDocument_FilePel_12" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$gvDocument$ctl14$FilePel&#39;,&#39;&#39;)">050424031456_13.pdf</a>
+			                                </td><td class="hidden" valign="top">050424031456_13.pdf</td><td align="center">
+                                                     <a onclick="if (!window.confirm(&#39;Are you sure want to delete this record?&#39;)) return false;" id="ContentPlaceHolder1_gvDocument_lnkDelete_12" class="btn " href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder1$gvDocument$ctl14$lnkDelete&#39;,&#39;&#39;)" style="display:inline-block;border-style:None;height:33px;width:100px;"><img id="ContentPlaceHolder1_gvDocument_Image1_12" src="ico_dustbin.png" style="width: 20px; height:20px;margin-top: -9px;" /></a>
+                                                </td>
+		</tr>
+	</table>
+</div>
+
+                        </div>
+                      
+                    </div>
+                </div> 
+              </div>
+              
+            </div>
+
+    
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><img src="up-arrow.png" style="padding-top:3px;padding-left:5px;max-height:80px;"/></button>
+       <script>
+           //Get the button
+           var mybutton = document.getElementById("myBtn");
+
+           // When the user scrolls down 20px from the top of the document, show the button
+           window.onscroll = function () { scrollFunction() };
+
+           function scrollFunction() {
+               if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                   mybutton.style.display = "block";
+               } else {
+                   mybutton.style.display = "none";
+               }
+           }
+
+           // When the user clicks on the button, scroll to the top of the document
+           function topFunction() {
+               document.body.scrollTop = 0;
+               document.documentElement.scrollTop = 0;
+           }
+       </script>
+
+               </section> 
+       </div>
+    
+        <footer>
+           <div class="footerInner">Pusat Pembelajaran Sepanjang Hayat | Universiti Teknikal Malaysia Melaka, Hang Tuah Jaya, 76100 Durian Tunggal, Melaka, Malaysia. <br />
+               Telefon: +06 270 4591/4596/4597  | Faks : +06 270 1028| Emel : <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6919191a01291c1d0c04470c0d1c470410">[email&#160;protected]</a>  | Facebook : <a href="https://www.facebook.com/Pusat-Pembelajaran-Sepanjang-Hayat-UTeM-1287011204714711/" target="_blank" style="color: #888;">Pusat Pembelajaran Sepanjang Hayat - UTeM</a>
+           </div> 
+        </footer> 
+    
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript">
+//<![CDATA[
+OpenWindowPB('viewDoc.aspx',1024,600, 'Upload/050424031456/050424031456_13.pdf');//]]>
+</script>
+</form>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon='{"version":"2024.11.0","token":"f9b88da4ffd8411a9ba5c6cdd009b070","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
